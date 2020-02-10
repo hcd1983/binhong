@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "Gotham Book";
+  src: "fonts/GothamBook Regular.otf";
+}
+
+body, .dropdown-menu {
+    font-size: 0.75rem;
+
+}
+
+h1, .h1 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+p{
+	font-size: 0.75rem;
+}
+
+#header.sticky-style-2 {
+    height: 126px;
+}
+
+#header, #header-wrap, #logo img{
+	height: 65px;
+}
+
+.header-extras{
+	margin-top: 15px;
+}
+
+.button{
+	font-size: 0.75rem;
+	font-weight: 400;
+	min-width: 128px;
+	text-align: center;
+}
+
+.header-extras li .he-text{
+	font-weight: 400;
+	font-size: 0.75rem;
+}
+.header-extras li .he-text span {
+    display: block;
+    font-weight: 700;
+    color: #000;
+}
+
+.bin-icon-box{
+	background-color:#FFF;
+	padding:30px;
+	transition: all 0.5s 0s;
+	border:0.5px #bfbec0 solid;
+}
+
+
+
+
+
+.bin-icon-box h3{
+	color:#000;
+}
+
+.bin-icon-box:hover,.bin-icon-box.active{
+	background-color:var(--main-bg-color);
+	border-color:var(--main-bg-color);
+}
+
+.bin-icon-box:hover h3,.bin-icon-box:hover a,.bin-icon-box:hover,.bin-icon-box.active,.bin-icon-box.active a{
+	color:#FFF;
+}
+
+
+.bh-head-icon{
+	height: 25px;
+}
+
+.he-text {
+    color: #606060;
+}
+
+.he-text span{
+	color:#000;
+	font-weight: bold;
+}
+
+.slider-caption h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.3rem; 
+}
+
+.binhong-slider{
+	max-height: 450px;
+}
+
+.binhong-iconbox{
+	padding: 40px 30px;
+	border-width: 0.5px;
+	border-color: #e4e4e4;
+	border-bottom-style: solid;
+	border-right-style: solid;
+
+}
+
+.binhong-icon{
+	
+}
+
+.binhong-icon img{
+	width: 70px;
+}
+
+.binhong-iconbox h4{
+	margin-bottom: 10px;
+}
+
+.binhong-pic-shadow{
+	position: relative;
+}
+.binhong-pic-shadow:before{
+	content: "";
+	background-color: var(--main-bg-color);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:18px;
+	right: -18px;
+	z-index: -1;
+}
+
+.pd-on-sm{
+	padding: 0;
+	padding-left: 20px;
+}
+
+#trigger_box h1{
+	letter-spacing: .5rem;
+}
+@media (max-width: 767.98px) {
+	#slider.binhong-slider{
+		height: 70vh !important;
+	}
+	.swiper_wrapper:not(.force-full-screen), .swiper_wrapper:not(.force-full-screen):not(.canvas-slider-grid) .swiper-slide {
+	    height: 70vh !important;
+	}
+
+	.slider-caption h3 {
+    	font-size: 1.5rem;
+	}
+
+	.binhong-iconbox{
+		margin-right: 15px;
+		margin-left: 15px;
+		border-right: none;
+	}
+}
+
+@media (max-width: 575.98px){
+	.pd-on-sm{
+		padding: 0 15px;
+	}
+
+	.binhong-pic-shadow:before{
+		top:10px;
+		right: -10px;
+	}
+	#slider.binhong-slider{
+		height: 70vh !important;
+	}
+	.swiper_wrapper:not(.force-full-screen), .swiper_wrapper:not(.force-full-screen):not(.canvas-slider-grid) .swiper-slide {
+	    height: 70vh !important;
+	}
+}
