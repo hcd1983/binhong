@@ -2,7 +2,8 @@
 <html dir="ltr" lang="en-US">
 <head>
 	
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="author" content="SemiColonWeb" />
 
@@ -21,9 +22,16 @@
 	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="binhong.css" type="text/css" />
+
+	<script type="text/javascript">
+		const config = {
+			_current : "index",
+		};
+	</script>
 	<!-- Document Title
 	============================================= -->
 	<title id="title">{{title}}</title>
+	
 
 </head>
 
@@ -107,7 +115,7 @@
 						<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
 
 						<ul>
-							<li v-for="(link, key) in nav">
+							<li v-for="(link, key) in nav" :class="{current:currentPage(link.current)}">
 								<a :href="link.path" v-html="link.text + link.icon"></a>
 							</li>
 						</ul>
@@ -138,7 +146,7 @@
 				</div>
 				<div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
 				<div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
-				<div class="slide-number"><div class="slide-number-current"></div><span>/</span><div class="slide-number-total"></div></div>
+				<!-- <div class="slide-number"><div class="slide-number-current"></div><span>/</span><div class="slide-number-total"></div></div> -->
 			</div>
 
 		</section>
@@ -148,7 +156,7 @@
 		<section id="content">
 
 			<div class="content-wrap nopadding">
-				<div id="whatwedo" class=" section nopadding nomargin bg-white">
+				<div id="whatwedo" class="section nopadding nomargin bg-white" :class="addonClass">
 					<div class="container-fluid">
 						<div class="row"> 
 
@@ -198,12 +206,12 @@
 						<div class="row nomargin">
 							<div v-for="(service,index) in services" class="col-md-4 bin-icon-box mb-2 mb-md-0" :class="{active: service.isActive}" @click="activeToogle(service,index)" >
 								
-								<div class="mb-1">
-									<img :src="service.icon">
+								<div class="mb-2">
+									<div v-html="icon(service.icon)"></div>
 								</div>
 								<div>
 									<h3 class="mb-2">{{service.title}}</h3>
-									<p class="mb-4">{{service.description}}</p>
+									<p class="mb-3">{{service.description}}</p>
 								</div>
 								<a class="know-more" :href="service.link">瞭解更多 <i class="icon-angle-right"></i></a>
 							</div>
@@ -212,6 +220,7 @@
 				</div>		
 
 				<div id="trigger_box" class="section nomargin dark  d-flex align-items-center" :style="style">
+					<div class="overlay" style="background-color: rgba(26,11,8,.3)"></div>
 					<div class="container">
 						<h1 class="text-center mt-4">{{title}}</h1>
 						<div class="center">
@@ -225,8 +234,8 @@
 		
 		<!-- Footer
 		============================================= -->
-		<footer id="footer" class="dark">
-
+		<footer id="footer" class="dark noborder" style="background-image:rgba(0,0,0,.8);background-size: cover;background-position: center;" :style="{'background-image':'url('+bg_image+')'}">
+			<div class="overlay" style="background-color:rgba(0,0,0,.8);"></div>
 			<div class="container">
 
 				<!-- Footer Widgets
@@ -237,9 +246,9 @@
 						<div class="col-md-5 nomargin">						
 							<div class="widget clearfix">
 
-								<img :src="logo" alt="" class="footer-logo">
+								<img :src="logo" alt="" class="footer-logo mb-3">
 
-								<p>{{des}}</p>
+								<p class="mb-3">{{des}}</p>
 
 								<ul v-if="nav" id="footer_nav">
 									<li v-for="(li , index) in nav">
@@ -255,16 +264,17 @@
 						<div class="col-md-5 nomargin">
 
 							<div class="widget clearfix">
-								<h4>聯絡資訊</h4>
-								<p v-html="des_2"></p>
-								<div>
-									<span class="footer-icon"><img src="images/icons/f-map.svg"></span>{{contact.addressFull}}
+								<div class="mb-3 d-block d-md-none"></div>
+								<h4  class="mb-3" style="color:#FFF">聯絡資訊</h4>
+								<p v-html="des_2" class="mb-4"></p>
+								<div class="d-flex align-items-center mb-2">
+									<span class="footer-icon"><img src="images/icons/f-map.svg"></span><p class="nomargin nopadding">{{contact.addressFull}}</p>
 								</div>
-								<div>
-									<span class="footer-icon"><img src="images/icons/f-mail.svg"></span>{{contact.email}}
+								<div class="d-flex align-items-center mb-2">
+									<span class="footer-icon"><img src="images/icons/f-mail.svg"></span><p class="nomargin nopadding">{{contact.email}}</p>
 								</div>
-								<div>
-									<span class="footer-icon"><img src="images/icons/f-tel.svg"></span>{{contact.telfooter}}
+								<div class="d-flex align-items-center">
+									<span class="footer-icon"><img src="images/icons/f-tel.svg"></span><p class="nomargin nopadding">{{contact.telfooter}}</p>
 								</div>
 							</div>	
 
@@ -297,7 +307,7 @@
 	<!-- Go To Top
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
-
+	<script src="js/icons.js"></script>
 	<script src="site.js"></script>
 
 	<!-- External JavaScripts

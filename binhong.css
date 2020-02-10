@@ -8,6 +8,11 @@ body, .dropdown-menu {
 
 }
 
+h1, h2, h3, h4, h5, h6{
+	color:#000;
+	letter-spacing: 0.2rem;
+}
+
 h1, .h1 {
     font-size: 2.5rem;
 }
@@ -22,6 +27,7 @@ h4 {
 
 p{
 	font-size: 0.75rem;
+	letter-spacing: 0.2rem;
 }
 
 #header.sticky-style-2 {
@@ -36,11 +42,55 @@ p{
 	margin-top: 15px;
 }
 
+.widget p:not(.lead) {
+    font-size: 0.75rem;
+    color:#FFF;
+    opacity: 1;
+}
+
+#footer_nav{
+	display: flex;
+	margin:0;
+	padding:0;
+}
+
+#footer_nav li{
+	color:#FFF;
+	list-style: none;
+	padding-right: 20px;
+}
+
+#footer_nav li a{
+	color:#FFF;
+	letter-spacing: 0.2rem;
+}
+
+#footer_nav li:hover a{
+	color:var(--main-bg-color);
+}
+
+.footer-logo{
+	width: 250px;
+}
+
+span.footer-icon {
+    width: 18px;
+    height: 18px;
+    /* display: inline-block; */
+    margin-right: 15px;
+}
+
 .button{
 	font-size: 0.75rem;
 	font-weight: 400;
 	min-width: 128px;
 	text-align: center;
+	letter-spacing: 0.2rem;
+}
+
+.dark .button-dark:not(.button-border), .dark .button:hover {
+    background-color: #FFF;
+    color:var(--main-bg-color);
 }
 
 .header-extras li .he-text{
@@ -61,6 +111,9 @@ p{
 }
 
 
+.bin-icon-box svg *{
+	fill:var(--main-bg-color);
+}
 
 
 
@@ -71,6 +124,10 @@ p{
 .bin-icon-box:hover,.bin-icon-box.active{
 	background-color:var(--main-bg-color);
 	border-color:var(--main-bg-color);
+}
+
+.bin-icon-box:hover svg *,.bin-icon-box.active svg *{
+	fill:#FFF;
 }
 
 .bin-icon-box:hover h3,.bin-icon-box:hover a,.bin-icon-box:hover,.bin-icon-box.active,.bin-icon-box.active a{
@@ -144,6 +201,13 @@ p{
 #trigger_box h1{
 	letter-spacing: .5rem;
 }
+
+div.shadowBottom {
+    box-shadow: 0 5px 5px #aaa;
+    position: relative;
+    z-index: 9999;
+}
+
 @media (max-width: 767.98px) {
 	#slider.binhong-slider{
 		height: 70vh !important;
