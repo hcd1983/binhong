@@ -30,6 +30,10 @@ p{
 	letter-spacing: 0.2rem;
 }
 
+.welcome-msg{
+	letter-spacing: 0.1rem;
+}
+
 #header.sticky-style-2 {
     height: 126px;
 }
