@@ -205,7 +205,7 @@ span.footer-icon {
 div.shadowBottom {
     box-shadow: 0 5px 5px #aaa;
     position: relative;
-    z-index: 9999;
+    z-index: 999;
 }
 
 @media (max-width: 767.98px) {
