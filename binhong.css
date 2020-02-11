@@ -212,6 +212,22 @@ div.shadowBottom {
     z-index: 999;
 }
 
+@media (max-width: 991px) {
+	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li:hover a, body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li.current a, body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li:hover a, body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.current a {
+	    color: var(--main-bg-color) !important;
+	}
+
+	#primary-menu .container #primary-menu-trigger {
+	    top: 5px;
+	    left: 50%;
+	    margin-left: -25px;
+	}
+
+	#logo{
+		height: 65px;
+	}
+}
+
 @media (max-width: 767.98px) {
 	#slider.binhong-slider{
 		height: 70vh !important;
