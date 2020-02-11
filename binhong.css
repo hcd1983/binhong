@@ -212,20 +212,52 @@ div.shadowBottom {
     z-index: 999;
 }
 
+@media (max-width: 991.98px) {
+	#header.sticky-style-2 #header-wrap, #header.sticky-style-3 #header-wrap {
+	    min-height: 60px;
+	    position: absolute;
+	    top: 0;
+	    right: 15px;
+	}
+
+	#logo {
+	    height: 80px;
+	    text-align: left;
+	    margin: 0 !important;
+	    display: flex;
+	    align-items: center;
+	}
+
+	ul.sf-js-enabled {
+	    width: 100vw;
+	    background: #FFF;
+	    position: absolute;
+	    right: -15px;
+	    top: 65px;
+	    
+	}
+
+	#primary-menu .container #primary-menu-trigger {
+	   top: 5px;
+	    left: 50%;
+	    margin-left: -25px;
+	    margin-top: 10px;
+	}
+
+	#primary-menu > div > ul {
+	    padding-top: 0 !important;
+    	padding-left: 15px !important;
+    	padding-right: 15px !important;
+	}
+
+}
+
 @media (max-width: 991px) {
+	
 	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li:hover a, body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li.current a, body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li:hover a, body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.current a {
 	    color: var(--main-bg-color) !important;
 	}
 
-	#primary-menu .container #primary-menu-trigger {
-	    top: 5px;
-	    left: 50%;
-	    margin-left: -25px;
-	}
-
-	#logo{
-		height: 65px;
-	}
 }
 
 @media (max-width: 767.98px) {
