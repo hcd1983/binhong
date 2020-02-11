@@ -1,5 +1,6 @@
 :root {
   --letter-spacing-default: 0.02rem;
+  --font-size-default:0.85rem;
 }
 
 @font-face {
@@ -8,7 +9,7 @@
 }
 
 body, .dropdown-menu {
-    font-size: var(--letter-spacing-default);
+    font-size: var(--font-size-default);
 
 }
 
@@ -22,23 +23,33 @@ h1, .h1 {
 }
 
 h3 {
-    font-size: 1rem;
+    font-size: 1.05rem;
 }
 
 h4 {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 p{
-	font-size: 0.8rem;
+	font-size: var(--font-size-default);
 	letter-spacing: var(--letter-spacing-default);
+}
+
+.row .section{
+	width: 100%;
+}
+
+#page-title.page-title-parallax{
+	background-image: none;
 }
 .slider-caption h2{
 	font-size: 4rem;
+	text-transform:none;
 }
 
 .slider-caption h3{
    font-size: 2rem;
+   text-transform:none;
 }
 blockquote h3 {
     font-size: 1.3rem;
@@ -68,7 +79,7 @@ blockquote h3 {
 }
 
 .widget p:not(.lead) {
-    font-size: var(--letter-spacing-default);
+    font-size: var(--font-size-default);
     color:#FFF;
     opacity: 1;
 }
@@ -136,7 +147,7 @@ span.footer-icon {
 
 .header-extras li .he-text{
 	font-weight: 400;
-	font-size: var(--letter-spacing-default);
+	font-size: calc(0.9 * var(--font-size-default));
 }
 .header-extras li .he-text span {
     display: block;
@@ -146,12 +157,15 @@ span.footer-icon {
 
 .bin-icon-box{
 	background-color:#FFF;
-	padding:30px;
+	padding:30px 30px 50px;
 	transition: all 0.5s;
 	border:0.5px #bfbec0 solid;
 }
 
-
+.bin-icon-box svg{
+	width: 70px;
+	height: auto;
+}
 .bin-icon-box svg path{
 	transition: all 0.5s ;
 	fill:var(--main-bg-color);
@@ -215,13 +229,7 @@ span.footer-icon {
 
 }
 
-.col-md-4.binhong-iconbox:nth-child(3n+1) {
-    border-left: none;
-}
 
-.col-md-4.binhong-iconbox:nth-child(3n) {
-    border-right: none;
-}
 
 .binhong-icon{
 	
@@ -380,12 +388,20 @@ div.shadowBottom {
 		padding:130px 0;
 	}
 
+	.binhong-iconbox:nth-child(3n+1) {
+	    border-left: none;
+	}
+
+	.binhong-iconbox:nth-child(3n) {
+	    border-right: none;
+	}
+
 
 }
 
 @media (max-width: 1365px) {
 	#logo{
-		max-width: 250px;
+		max-width: 230px;
 	}
 	/*.binhong-iconbox{
 		padding: 80px 80px;

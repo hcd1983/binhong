@@ -1,9 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" lang="en-US">
 <head>
-	<title></title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	
+
 </head>
-<body>
-	<img style="max-width:100%;height: auto;" src="images/oneplus-01.jpg">
+
+<body  class="stretched">
+
+	<div id="tester">
+		<sixblocks :text="the_addonClass"></sixblocks>
+		<wedo :active="isActive" :addonclass="the_addonClass" :order="the_order" :list="the_list"></wedo>
+	</div>
+
+	<div id="testerTwo">
+		<div is="wedo" :active="isActive" :addonclass="the_addonClass" :order="the_order" :list="the_list"></div>
+	</div>
+
+	<div id="sixblocks" style="display: none">
+		<h1>{{ text }}</h1>
+	</div>
+
+	<div id="wedo" style="display: none">
+		<div :id="order" v-if="active" class="section nopadding nomargin bg-white" :class="[addonclass,order]">
+			<div class="container-fluid" style="max-width: 1300px;">
+				<div class="row"> 
+
+					<h1>Success</h1>
+					<h2> {{addonclass}}</h2>
+					<div v-for="(info,index) in list" class="col-md-6 col-lg-4 binhong-iconbox">
+						<div class="row m-auto">
+							<div class="binhong-icon center mb-3 mb-md-0 col-md-3 nopadding d-lg-flex align-items-center justify-content-center">
+								<inside :text="addonclass"></inside>
+								<img :src="info.icon">
+							</div>
+							<div class="col-md-9">
+								<h3 class="text-center text-md-left">{{info.title}}</h3>
+								<p class="nomargin text-justify">{{info.des}}</p>
+							</div>
+						</div>	
+														
+					</div>	
+
+				</div>
+				<div class="clear"></div>
+			</div>	
+		</div>
+	</div>	
+
+	<div id="inside" style="display: none">
+		<h1>{{ text }}</h1>
+	</div>
+
+
+	<script>		
+
+	// what we do ==================================================================
+	var whatWeDo = [
+		{
+			title: "合理交期與價錢",
+			des: "模組模具可快速更換產品，追求高效率的生產出貨，秉持合乎客戶成本的合理價錢，以「客戶最大效益」為首要目標。",
+			icon:"images/icons/money.svg",
+
+		},
+		{
+			title: "全檢服務",
+			des: "貨品全檢出貨，確保我們能以穩定的產品品質，奠定與客戶的長期友誼。",
+			icon:"images/icons/check.svg",
+
+		},
+
+	];
+
+	Vue.component('sixblocks', {	
+	  template: '#sixblocks',
+	  // template: `<h1>{{ text }}</h1>`,
+	  props: ['isActive','list','text','order'],
+	});
+
+	Vue.component('inside', {	
+	  template: '#inside',
+	  // template: `<h1>{{ text }}</h1>`,
+	  props: ['text'],
+	});
+
+	Vue.component('wedo', {
+	  template: '#wedo',	
+	  props: ['active','list','text','order','addonclass'],
+	});
+
+
+	let tester = new Vue({
+	    el:'#tester',
+	    data: {
+			the_list:whatWeDo,
+			the_addonClass:"shadowBottom",
+			the_order:1,
+			isActive:true,
+		},
+	})
+
+	let testerTwo = new Vue({
+	    el:'#testerTwo',
+	    data: {
+			the_list:whatWeDo,
+			the_addonClass:"TESTER TWO",
+			the_order:1,
+			isActive:true,
+		},
+	})
+
+	</script>
+
+	
+	
 </body>
 </html>

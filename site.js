@@ -1,9 +1,59 @@
 "use strict";
+
+var PageID = config._current;
+
 function sizecount(size){
 
 	return size / 12 * 0.75;
 
 }
+
+function bsOrderClass(n){
+	if(!n){ return "order-1";}else{
+		return "order-" + n;
+	}
+}
+
+function GetHash(){
+  return location.hash.replace(/^#/, '');
+}
+
+// window.onhashchange = function(){initPage(GetHash())};
+window.onload = function(){initPage(PageID)};
+
+function initPage(PageID){
+	switch(PageID){
+		case("index"):
+			titleSectionData.isActive = false;
+		break;
+		case("about"):
+			sliderData.isActive = false;
+			aboutUsData.order = bsOrderClass(1);
+			whatWeDoData.order = bsOrderClass(2);
+			serviceData.order = bsOrderClass(3);
+			triggerData.style["background-image"] = "url(images/trigger-2.png)";
+		break;
+		case("service"):
+			sliderData.isActive = false;
+			titleSectionData.text = "Services";
+			aboutUsData.isActive = false;
+			whatWeDoData.isActive = false;
+			serviceData.isActive = false;
+			triggerData.style["background-image"] = "url(images/trigger-3.png)";
+		break;
+		case("contact"):
+			sliderData.isActive = false;
+			titleSectionData.isActive = false;
+			aboutUsData.isActive = false;
+			whatWeDoData.isActive = false;
+			serviceData.isActive = false;
+			triggerData.style["background-image"] = "url(images/trigger-3.png)";
+		break;
+		default:
+		break;
+	}
+}
+
 
 var siteTite = "秉宏精密科技實業有限公司";
 var contact = {
@@ -17,6 +67,13 @@ var contact = {
 	barcode: "64915368",
 }
 
+var siteLinks = {
+	index:"index.html",
+	about:"about.html",
+	service:"service.html",
+	contact:"contact.html",
+}
+
 var footer_bg = "images/footer-bg.jpg";
 
 var logo = "images/logo.svg";
@@ -26,18 +83,59 @@ var logo_bw = "images/logo_bw.svg";
 var site = {
 	logo:logo,
 	logo_bw:logo_bw,
-	base:"index.html",
+	base:siteLinks.html,
 	title:siteTite,
 
 };
 
 var nav = [
-			{text:"首頁",icon:``,path:"index.html",current:"index"},
-			{text:`關於秉宏`,icon:``,path:"about.html",current:"about"},
-			{text:`服務項目`,icon:``,path:"service.html",current:"service"},
-			{text:`聯絡我們`,icon:``,path:"contact.html",current:"contact"},
+			{text:"首頁",icon:``,path:siteLinks.index,current:"index"},
+			{text:`關於秉宏`,icon:``,path:siteLinks.about,current:"about"},
+			{text:`服務項目`,icon:``,path:siteLinks.service,current:"service"},
+			{text:`聯絡我們`,icon:``,path:siteLinks.contact,current:"contact"},
 		];
 
+// slider ========================================
+let _sliders = [
+	{
+		image:"images/slider01.png",
+		overlayStyle:{
+			"background-color":"rgba(26,11,8,.5)",
+		},
+		position:"center",
+		html:`<h2 data-animate="fadeInUp" class="mb-2">THE PUSHER <br>OF YOUR SUCCESS</h2>
+			  <h3 data-animate="fadeInUp" data-delay="200">我們幫助您實現願景</h3>
+			  <div class="mt-2" data-animate="fadeInUp" data-delay="400">
+				<a class="button button-100" href="${siteLinks.service}">服務項目</a>
+				<a class="button button-wihte button-100" href="${siteLinks.contact}">聯絡我們</a>
+			  </div>`,
+
+	},
+	{
+		image:"images/slider_02.jfif",
+		position:"",
+		html:`<h2 data-animate="fadeInUp">我們幫助你實現願景2</h2>
+			<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.</p>`,
+		
+	},
+	
+];
+
+var sliderData = {
+	isActive:true,
+	style:{height:"450px"},
+	sliders:_sliders,
+}
+
+//tilte section ===============================================================		
+var titleSectionData = {
+	isActive:true,
+	text:'About us',
+	style:{
+		'background-image':'url(images/slider01.png)',
+	},
+}
+// what we do ==================================================================
 var whatWeDo = [
 	{
 		title: "合理交期與價錢",
@@ -78,6 +176,77 @@ var whatWeDo = [
 
 ];
 
+var whatWeDoData = {
+	list:whatWeDo,
+	addonClass:"shadowBottom",
+	order:bsOrderClass(1),
+	isActive:true,
+}
+
+// about us =========================================================
+
+var aboutUsData = {
+	blockquote:`We save your time,<br>We save your money,<br>and we save you from your troubles.`,
+	title: "關於秉宏精密科技",
+	link:siteLinks.about,
+	description:"秉宏精密位於台南市永康區，鄰近台南科學園區。擁有1988年至今的加工經驗，優秀的經營團隊，秉持著『人性化管理』，追求企業永續經營及成長。主要從事電子相關製造業，以射頻連接器SMA.SMB.MCX.MMCX.TNC...等系列為主軸，提供專業代工協助開發製造，同時也承接各類五金加工。",
+	image:"images/about.png",
+	order:bsOrderClass(2),
+	isActive:true,
+} 
+
+// service =========================================================
+var serviceData = {
+	style:{
+		'background-image':'url(images/world.svg)',
+		'background-position':'center',
+		'background-size':'cover',
+	},
+	title: "服務項目",
+	services:[
+		{
+			"icon":"gear",
+			"title":"各類五金車铣加工",
+			"description":"我們是全台灣最大的汽車零件製造商之一，並且是公認的領導者……",
+			"link":siteLinks.service,
+			isActive: false,
+		},
+		{
+			"icon":"gearman",
+			"title":"產品OEM代工/跨產業CNC代工",
+			"description":"我們是全台灣最大的汽車零件製造商之一，並且是公認的領導者……",
+			"link":siteLinks.service,
+			isActive: false,
+		},
+		{
+			"icon":"note",
+			"title":"品質檢測設備",
+			"description":"我們是全台灣最大的汽車零件製造商之一，並且是公認的領導者……",
+			"link":siteLinks.service,
+			isActive: false,
+		},
+	],
+	isActive:true,
+	order:bsOrderClass(3),
+
+}
+
+
+// trigger ===========================================================================
+var triggerData= {
+	style:{
+		'background-image':'url(images/trigger-1.png)',
+		'background-position':'center',
+		'background-size':'cover',
+		'min-height':'400px',
+	},
+	title: "專業客製化服務",
+	link:siteLinks.contact,
+	text:"聯絡我們",
+	isActive:true,
+	order:bsOrderClass(4),
+}
+
 // title =======================================================
 
 // let title = new Vue({
@@ -86,6 +255,10 @@ var whatWeDo = [
 // 	 	title: site.tite,
 // 	 }
 // })
+
+
+// before Go
+
 
 
 // top bar ===========================================================
@@ -114,7 +287,7 @@ let header = new Vue({
 	methods:{
 		currentPage: function(_current){
 
-			return _current == config._current;	
+			return _current == PageID;	
 
 		},
 	}
@@ -140,31 +313,6 @@ let footer = new Vue({
 
 
 // slider ====================================================
-let sliderData = [
-	{
-		image:"images/slider01.png",
-		overlayStyle:{
-			"background-color":"rgba(26,11,8,.5)",
-		},
-		position:"center",
-		html:`<h2 data-animate="fadeInUp" class="mb-2">THE PUSHER <br>OF YOUR SUCCESS</h2>
-			  <h3 data-animate="fadeInUp" data-delay="200">我們幫助您實現願景</h3>
-			  <div class="mt-2" data-animate="fadeInUp" data-delay="400">
-				<a class="button button-100" href="">服務項目</a>
-				<a class="button button-wihte button-100" href="">聯絡我們</a>
-			  </div>`,
-
-	},
-	{
-		image:"images/slider_02.jfif",
-		position:"",
-		html:`<h2 data-animate="fadeInUp">我們幫助你實現願景2</h2>
-			<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.</p>`,
-		
-	},
-	
-];
-
 
 Vue.component('slidercaption',{
     template: '<div class="slider-caption" :class="renderClass" v-html="slider.html"></div>',
@@ -200,71 +348,34 @@ Vue.component('slidercaption',{
 })
 
 
+if(document.getElementById("slider")){
+	let slider = new Vue({
+		el:"#slider",
+		data:sliderData,
+	})
+}
 
 
-let slider = new Vue({
-	el:"#slider",
-	data:{
-		style:{height:"450px"},
-		sliders:sliderData,
-	}
+
+let titleSection = new Vue({
+	el:"#page-title",
+	data:titleSectionData,
 })
 
 
 let _whatWeDo = new Vue({
 	el:"#whatwedo",
-	data:{
-		list:whatWeDo,
-		addonClass:"shadowBottom",
-	}
+	data:whatWeDoData
 })
 
 let about_us = new Vue({
 	el:"#about_us",
-	data:{
-		blockquote:`We save your time,<br>We save your money,<br>and we save you from your troubles.`,
-		title: "關於秉宏精密科技",
-		link:"#",
-		description:"秉宏精密位於台南市永康區，鄰近台南科學園區。擁有1988年至今的加工經驗，優秀的經營團隊，秉持著『人性化管理』，追求企業永續經營及成長。主要從事電子相關製造業，以射頻連接器SMA.SMB.MCX.MMCX.TNC...等系列為主軸，提供專業代工協助開發製造，同時也承接各類五金加工。",
-		image:"images/about.png",
-	}
+	data:aboutUsData,
 })
 
 let service = new Vue({
 	el:"#service",
-	data:{
-		style:{
-			'background-image':'url(images/world.svg)',
-			'background-position':'center',
-			'background-size':'cover',
-
-		},
-		title: "服務項目",
-		services:[
-			{
-				"icon":"gear",
-				"title":"各類五金車铣加工",
-				"description":"我們是全台灣最大的汽車零件製造商之一，並且是公認的領導者……",
-				"link":"#",
-				isActive: false,
-			},
-			{
-				"icon":"gearman",
-				"title":"產品OEM代工/跨產業CNC代工",
-				"description":"我們是全台灣最大的汽車零件製造商之一，並且是公認的領導者……",
-				"link":"#",
-				isActive: false,
-			},
-			{
-				"icon":"note",
-				"title":"品質檢測設備",
-				"description":"我們是全台灣最大的汽車零件製造商之一，並且是公認的領導者……",
-				"link":"#",
-				isActive: false,
-			},
-		],
-
-	},
+	data:serviceData,
 	methods:{
 		activeToogle:function(service,index){
 			
@@ -283,18 +394,7 @@ let service = new Vue({
 
 let trigger_box = new Vue({
 	el:"#trigger_box",
-	data:{
-		style:{
-			'background-image':'url(images/trigger-1.png)',
-			'background-position':'center',
-			'background-size':'cover',
-			'min-height':'400px',
-		},
-		title: "專業客製化服務",
-		link:"#",
-		text:"聯絡我們"
-
-	}
+	data:triggerData,
 })
 
 
