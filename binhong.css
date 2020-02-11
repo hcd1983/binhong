@@ -211,6 +211,7 @@ span.footer-icon {
 	border-bottom-style: solid;
 	border-right-style: solid;
 	border-left-style: solid;
+	display: flex;
 
 }
 

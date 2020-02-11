@@ -47,32 +47,32 @@ var whatWeDo = [
 	},
 	{
 		title: "全檢服務",
-		des: "模組模具可快速更換產品，追求高效率的生產出貨，秉持合乎客戶成本的合理價錢，以「客戶最大效益」為首要目標。",
-		icon:"images/icons/money.svg",
+		des: "貨品全檢出貨，確保我們能以穩定的產品品質，奠定與客戶的長期友誼。",
+		icon:"images/icons/check.svg",
 
 	},
 	{
 		title: "專業技術/豐富經驗",
-		des: "模組模具可快速更換產品，追求高效率的生產出貨，秉持合乎客戶成本的合理價錢，以「客戶最大效益」為首要目標。",
-		icon:"images/icons/money.svg",
+		des: "多年的CNC加工經歷，秉宏擁有經驗豐富的設計工程師團隊，讓我們比別人更能解決產品加工上的問題，也能為客戶降低開發成本。",
+		icon:"images/icons/idea.svg",
 
 	},
 	{
 		title: "即時服務/資訊更新",
-		des: "模組模具可快速更換產品，追求高效率的生產出貨，秉持合乎客戶成本的合理價錢，以「客戶最大效益」為首要目標。",
-		icon:"images/icons/money.svg",
+		des: "跟上世代的服務，即時更新的資訊，為客戶走在前端 ，即時性的回覆及服務客人。",
+		icon:"images/icons/connect.svg",
 
 	},
 	{
 		title: "品質保證",
-		des: "模組模具可快速更換產品，追求高效率的生產出貨，秉持合乎客戶成本的合理價錢，以「客戶最大效益」為首要目標。",
-		icon:"images/icons/money.svg",
+		des: "通過ISO9001:2015的國際認證。",
+		icon:"images/icons/award.svg",
 
 	},
 	{
 		title: "設備完善/快速打樣",
-		des: "模組模具可快速更換產品，追求高效率的生產出貨，秉持合乎客戶成本的合理價錢，以「客戶最大效益」為首要目標。",
-		icon:"images/icons/money.svg",
+		des: "不斷的強化廠內設備，我們使用日本TSUGAMI和STAR車铣複合機型。並擁有寫程式及繪圖能力，提供快速打樣，節省開發時間。",
+		icon:"images/icons/pan.svg",
 
 	}
 
