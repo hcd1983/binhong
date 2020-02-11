@@ -80,12 +80,12 @@ var whatWeDo = [
 
 // title =======================================================
 
-let title = new Vue({
-	 el:'#title',
-	 data:{
-	 	title: site.tite,
-	 }
-})
+// let title = new Vue({
+// 	 el:'#title',
+// 	 data:{
+// 	 	title: site.tite,
+// 	 }
+// })
 
 
 // top bar ===========================================================
