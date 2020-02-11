@@ -63,7 +63,7 @@
 		============================================= -->
 		<header id="header" class="sticky-style-2 no-transition">
 
-			<div class="container clearfix">
+			<div class="container clearfix pt-lg-4 pb-lg-4">
 
 				<!-- Logo
 				============================================= -->
@@ -157,7 +157,7 @@
 
 			<div class="content-wrap nopadding">
 				<div id="whatwedo" class="section nopadding nomargin bg-white" :class="addonClass">
-					<div class="container-fluid">
+					<div class="container">
 						<div class="row"> 
 
 							<div v-for="(info,index) in list" class="col-md-4 binhong-iconbox">
@@ -182,7 +182,7 @@
 					<div class="container">
 						<div class="row align-items-center">
 							
-							<div class="col-md-6 mt-3 mt-md-0 order-md-2 mb-4 mb-md-0 pd-on-sm">
+							<div class="col-md-6 mt-3 mt-md-0 order-md-2 mb-5 mb-md-0 pd-on-sm">
 								<div class="about-pic binhong-pic-shadow">
 									<img :src="image">
 								</div>								
@@ -203,7 +203,7 @@
 					</div>
 				</div>
 
-				<div id="service" class="section nomargin" :style="style">
+				<div id="service" class="section nomargin bg-white" :style="style">
 					<div class="container">
 						<h3 class="mb-5">{{title}}</h3>
 						<div class="row nomargin">
@@ -216,7 +216,7 @@
 									<h4 class="mb-2 ls1">{{service.title}}</h4>
 									<p class="mb-3 text-justify">{{service.description}}</p>
 								</div>
-								<a class="know-more" :href="service.link">瞭解更多 <i class="icon-angle-right"></i></a>
+								<!-- <a class="know-more" :href="service.link">瞭解更多 <i class="icon-angle-right"></i></a> -->
 							</div>
 						</div>						
 					</div>
@@ -253,12 +253,12 @@
 
 								<p class="mb-4">{{des}}</p>
 
-								<ul v-if="nav" id="footer_nav">
-									<li v-for="(li , index) in nav">
-										<a :href="li.path">{{li.text}}</a>
-									</li>
-								</ul>
-							</div>						
+							</div>
+							<ul v-if="nav" id="footer_nav">
+								<li v-for="(li , index) in nav">
+									<a :href="li.path">{{li.text}}</a>
+								</li>
+							</ul>						
 
 						</div>
 

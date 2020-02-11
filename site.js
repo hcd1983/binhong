@@ -33,9 +33,9 @@ var site = {
 
 var nav = [
 			{text:"首頁",icon:``,path:"index.html",current:"index"},
-			{text:`關於秉宏`,icon:`<i class="icon-angle-down"></i>`,path:"about.html",current:"about"},
-			{text:`服務項目`,icon:`<i class="icon-angle-down"></i>`,path:"service.html",current:"service"},
-			{text:`聯絡我們`,icon:`<i class="icon-angle-down"></i>`,path:"contact.html",current:"contact"},
+			{text:`關於秉宏`,icon:``,path:"about.html",current:"about"},
+			{text:`服務項目`,icon:``,path:"service.html",current:"service"},
+			{text:`聯絡我們`,icon:``,path:"contact.html",current:"contact"},
 		];
 
 var whatWeDo = [
@@ -108,7 +108,7 @@ let header = new Vue({
 		nav:nav,
 		contact:contact,
 		logoStyle:{
-			"width":"210px",
+			"width":"280px",
 		}
 	},
 	methods:{
@@ -149,7 +149,7 @@ let sliderData = [
 		position:"center",
 		html:`<h2 data-animate="fadeInUp" class="mb-2">THE PUSHER <br>OF YOUR SUCCESS</h2>
 			  <h3 data-animate="fadeInUp" data-delay="200">我們幫助您實現願景</h3>
-			  <div class="mt-2">
+			  <div class="mt-2" data-animate="fadeInUp" data-delay="400">
 				<a class="button button-100" href="">服務項目</a>
 				<a class="button button-wihte button-100" href="">聯絡我們</a>
 			  </div>`,

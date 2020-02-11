@@ -1,10 +1,14 @@
+:root {
+  --letter-spacing-default: 0.02rem;
+}
+
 @font-face {
   font-family: "Gotham Book";
   src: "fonts/GothamBook Regular.otf";
 }
 
 body, .dropdown-menu {
-    font-size: 0.75rem;
+    font-size: var(--letter-spacing-default);
 
 }
 
@@ -18,20 +22,31 @@ h1, .h1 {
 }
 
 h3 {
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 h4 {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
 }
 
 p{
-	font-size: 0.75rem;
-	letter-spacing: 0.2rem;
+	font-size: 0.8rem;
+	letter-spacing: var(--letter-spacing-default);
+}
+.slider-caption h2{
+	font-size: 4rem;
+}
+
+.slider-caption h3{
+   font-size: 2rem;
+}
+blockquote h3 {
+    font-size: 1.3rem;
+    letter-spacing: 0.15rem;
 }
 
 .welcome-msg{
-	letter-spacing: 0.1rem;
+	letter-spacing: var(--letter-spacing-default);
 }
 
 #header.sticky-header:not(.static-sticky).sticky-style-2, #header.sticky-header:not(.static-sticky).sticky-style-3{
@@ -39,8 +54,10 @@ p{
 }
 
 #header.sticky-style-2 {
-    height: 126px;
+    height: 113px;
 }
+
+
 
 #header, #header-wrap, #logo img{
 	height: 65px;
@@ -51,7 +68,7 @@ p{
 }
 
 .widget p:not(.lead) {
-    font-size: 0.75rem;
+    font-size: var(--letter-spacing-default);
     color:#FFF;
     opacity: 1;
 }
@@ -70,7 +87,7 @@ p{
 
 #footer_nav li a{
 	color:#FFF;
-	letter-spacing: 0.2rem;
+	letter-spacing: var(--letter-spacing-default);
 }
 
 #footer_nav li:hover a{
@@ -89,11 +106,11 @@ span.footer-icon {
 }
 
 .button{
-	font-size: 0.75rem;
+	font-size: .8rem;
 	font-weight: 400;
 	min-width: 128px;
 	text-align: center;
-	letter-spacing: 0.2rem;
+	letter-spacing: 2px;
 	text-shadow: none;
 }
 
@@ -119,7 +136,7 @@ span.footer-icon {
 
 .header-extras li .he-text{
 	font-weight: 400;
-	font-size: 0.75rem;
+	font-size: var(--letter-spacing-default);
 }
 .header-extras li .he-text span {
     display: block;
@@ -130,12 +147,13 @@ span.footer-icon {
 .bin-icon-box{
 	background-color:#FFF;
 	padding:30px;
-	transition: all 0.5s 0s;
+	transition: all 0.5s;
 	border:0.5px #bfbec0 solid;
 }
 
 
-.bin-icon-box svg *{
+.bin-icon-box svg path{
+	transition: all 0.5s ;
 	fill:var(--main-bg-color);
 }
 
@@ -150,8 +168,12 @@ span.footer-icon {
 	border-color:var(--main-bg-color);
 }
 
-.bin-icon-box:hover svg *,.bin-icon-box.active svg *{
+.bin-icon-box:hover svg path,.bin-icon-box.active svg path{
 	fill:#FFF;
+}
+
+.bin-icon-box.active h3,.bin-icon-box.active h4{
+	transition: all 0.5s ;
 }
 
 .bin-icon-box.active h3,.bin-icon-box.active h4,.bin-icon-box:hover h3,.bin-icon-box:hover h4,.bin-icon-box:hover a,.bin-icon-box:hover,.bin-icon-box.active,.bin-icon-box.active a{
@@ -173,7 +195,7 @@ span.footer-icon {
 }
 
 .slider-caption h3 {
-    font-size: 1.75rem;
+    /*font-size: 1.75rem;*/
     font-weight: 500;
     letter-spacing: 0.3rem; 
 }
@@ -183,12 +205,21 @@ span.footer-icon {
 }
 
 .binhong-iconbox{
-	padding: 40px 30px;
+	padding: 40px 40px;
 	border-width: 0.5px;
 	border-color: #e4e4e4;
 	border-bottom-style: solid;
 	border-right-style: solid;
+	border-left-style: solid;
 
+}
+
+.col-md-4.binhong-iconbox:nth-child(3n+1) {
+    border-left: none;
+}
+
+.col-md-4.binhong-iconbox:nth-child(3n) {
+    border-right: none;
 }
 
 .binhong-icon{
@@ -227,7 +258,7 @@ span.footer-icon {
 }
 
 div.shadowBottom {
-    box-shadow: 0 5px 5px #aaa;
+    box-shadow: 0 3px 3px #ddd;
     position: relative;
     z-index: 997;
 }
@@ -307,7 +338,10 @@ div.shadowBottom {
 		margin-right: 15px;
 		margin-left: 15px;
 		border-right: none;
+		border-left: none;
 	}
+
+
 }
 
 @media (max-width: 575.98px){
@@ -325,4 +359,40 @@ div.shadowBottom {
 	.swiper_wrapper:not(.force-full-screen), .swiper_wrapper:not(.force-full-screen):not(.canvas-slider-grid) .swiper-slide {
 	    height: 70vh !important;
 	}
+}
+
+@media (min-width: 768px){
+	#footer_nav{
+		position: absolute;
+		bottom: 0;
+		left: 15px;
+	}
+}
+
+@media (min-width: 991px){
+	#primary-menu ul li > a{
+		padding-left: 0;
+		padding-right: 30px;
+	}
+
+	.section{
+		padding:130px 0;
+	}
+
+
+}
+
+@media (max-width: 1365px) {
+	#logo{
+		max-width: 250px;
+	}
+	/*.binhong-iconbox{
+		padding: 80px 80px;
+	}*/
+}
+
+@media (min-width: 1366px) {
+	/*.binhong-iconbox{
+		padding: 80px 80px;
+	}*/
 }
