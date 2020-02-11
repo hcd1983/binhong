@@ -18,11 +18,11 @@ h1, .h1 {
 }
 
 h3 {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
 }
 
 h4 {
-    font-size: 1rem;
+    font-size: 0.85rem;
 }
 
 p{
@@ -137,7 +137,7 @@ span.footer-icon {
 
 
 
-.bin-icon-box h3{
+.bin-icon-box h3,.bin-icon-box h4{
 	color:#000;
 }
 
@@ -150,7 +150,7 @@ span.footer-icon {
 	fill:#FFF;
 }
 
-.bin-icon-box:hover h3,.bin-icon-box:hover a,.bin-icon-box:hover,.bin-icon-box.active,.bin-icon-box.active a{
+.bin-icon-box.active h3,.bin-icon-box.active h4,.bin-icon-box:hover h3,.bin-icon-box:hover h4,.bin-icon-box:hover a,.bin-icon-box:hover,.bin-icon-box.active,.bin-icon-box.active a{
 	color:#FFF;
 }
 
@@ -195,7 +195,7 @@ span.footer-icon {
 	width: 70px;
 }
 
-.binhong-iconbox h4{
+.binhong-iconbox h4,.binhong-iconbox h3{
 	margin-bottom: 10px;
 }
 

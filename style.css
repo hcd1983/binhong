@@ -170,7 +170,7 @@ dl, dt, dd, ol, ul, li {
 body {
 	line-height: 1.5;
 	color: #555;
-	font-family: 'Gotham Book','Noto Sans TC', sans-serif;
+	font-family: 'Gotham Book','Noto Sans TC','微軟正黑體', sans-serif;
 }
 
 a {
@@ -202,7 +202,7 @@ h6 {
 	font-weight: 600;
 	line-height: 1.5;
 	margin: 0 0 30px 0;
-	font-family: 'Gotham Book','Noto Sans TC', sans-serif;
+	font-family: 'Gotham Book','Noto Sans TC','微軟正黑體', sans-serif;
 }
 
 h5,

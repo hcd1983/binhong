@@ -166,8 +166,8 @@
 										<img  :src="info.icon">
 									</div>
 									<div class="col-md-8">
-										<h4 class="text-center text-md-left">{{info.title}}</h4>
-										<p class="nomargin">{{info.des}}</p>
+										<h3 class="text-center text-md-left">{{info.title}}</h3>
+										<p class="nomargin text-justify">{{info.des}}</p>
 									</div>
 								</div>	
 																
@@ -186,7 +186,7 @@
 									<h3 class="nomargin" v-html="blockquote"></h3>									
 								</blockquote>
 								<h3 class="mb-2">{{title}}</h3>
-								<p class="nomargin">{{description}}</p>
+								<p class="nomargin text-justify">{{description}}</p>
 								<div class="mt-3">
 									<a :href="link" class="button nomargin">嘹解更多</a>	
 								</div>	
@@ -210,8 +210,8 @@
 									<div v-html="icon(service.icon)"></div>
 								</div>
 								<div>
-									<h3 class="mb-2">{{service.title}}</h3>
-									<p class="mb-3">{{service.description}}</p>
+									<h4 class="mb-2 ls1">{{service.title}}</h4>
+									<p class="mb-3 text-justify">{{service.description}}</p>
 								</div>
 								<a class="know-more" :href="service.link">瞭解更多 <i class="icon-angle-right"></i></a>
 							</div>
