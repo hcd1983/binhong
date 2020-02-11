@@ -90,6 +90,22 @@ span.footer-icon {
 	min-width: 128px;
 	text-align: center;
 	letter-spacing: 0.2rem;
+	text-shadow: none;
+}
+
+.button.button-wihte{
+	background: #FFF;
+	color:var(--main-bg-color);
+}
+
+
+.button.button-wihte:hover{
+	color:#FFF;
+	background: var(--main-bg-color);
+}
+
+.button.button-100{
+	min-width: 100px;
 }
 
 .dark .button-dark:not(.button-border), .dark .button:hover {

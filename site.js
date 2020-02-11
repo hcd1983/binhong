@@ -148,7 +148,11 @@ let sliderData = [
 		},
 		position:"center",
 		html:`<h2 data-animate="fadeInUp" class="mb-2">THE PUSHER <br>OF YOUR SUCCESS</h2>
-			  <h3 data-animate="fadeInUp" data-delay="200">我們幫助您實現願景</h3>`,
+			  <h3 data-animate="fadeInUp" data-delay="200">我們幫助您實現願景</h3>
+			  <div class="mt-2">
+				<a class="button button-100" href="">服務項目</a>
+				<a class="button button-wihte button-100" href="">聯絡我們</a>
+			  </div>`,
 
 	},
 	{
