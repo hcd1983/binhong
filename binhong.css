@@ -438,6 +438,10 @@ p.contact-box span{
 		bottom: 0;
 		left: 15px;
 	}
+
+	.text-md-justify{
+		text-align: justify !important;
+	}
 }
 
 @media (min-width: 991px){

@@ -60,7 +60,7 @@ Vue.component('whatwedo', {
 									</div>
 									<div class="col-md-9">
 										<h3 class="text-center text-md-left">{{info.title}}</h3>
-										<p class="nomargin text-justify">{{info.des}}</p>
+										<p class="nomargin text-center text-md-justify">{{info.des}}</p>
 									</div>
 								</div>	
 																
@@ -86,7 +86,7 @@ Vue.component('aboutus', {
 
 						<div class="col-md-6">
 							<blockquote class="noborder nopadding mb-3">
-								<h3 class="nomargin" v-html="blockquote"></h3>									
+								<h3 class="nomargin ls0" v-html="blockquote"></h3>									
 							</blockquote>
 							<h3 class="mb-2">{{title}}</h3>
 							<p class="nomargin text-justify">{{description}}</p>

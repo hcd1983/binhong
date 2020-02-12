@@ -52,7 +52,7 @@ var logo_bw = "images/logo_bw.svg";
 var site = {
 	logo:logo,
 	logo_bw:logo_bw,
-	base:siteLinks.html,
+	base:"index.html",
 	title:siteTite,
 
 };
