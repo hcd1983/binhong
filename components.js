@@ -67,7 +67,7 @@ Vue.component('whatwedo', {
 									</div>
 									<div class="col-md-9">
 										<h3 class="text-center text-md-left">{{info.title}}</h3>
-										<p class="nomargin text-md-justify" style="text-align-last: center;">{{info.des}}</p>
+										<p class="nomargin text-justify-last-center text-md-justify-last-left text-md-justify">{{info.des}}</p>
 									</div>
 								</div>	
 																

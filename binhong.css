@@ -310,6 +310,11 @@ p.contact-box span{
 	letter-spacing: calc( 5 * var(--letter-spacing-default));
 }
 
+.text-justify-last-center{
+	text-align: justify !important;
+	text-align-last: center !important;
+}
+
 @media (max-width: 1365px) {
 	#logo{
 		max-width: 230px;
@@ -441,6 +446,11 @@ p.contact-box span{
 
 	.text-md-justify{
 		text-align: justify !important;
+	}
+
+	.text-md-justify-last-left{
+		text-align: justify !important;
+		text-align-last: left !important;
 	}
 }
 
