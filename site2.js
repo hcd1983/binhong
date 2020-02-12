@@ -33,12 +33,13 @@ var contact = {
 	email: "binhong.sales@gmail.com",
 	time: "8:00-17:00 Mon-Sat",
 	barcode: "64915368",
+	fax:"06-2545166"
 }
 
 var siteLinks = {
 	index:"index.html",
 	about:"about.html",
-	service:"service.html",
+	services:"services.html",
 	contact:"contact.html",
 }
 
@@ -59,7 +60,7 @@ var site = {
 var nav = [
 			{text:"首頁",icon:``,path:siteLinks.index,current:"index"},
 			{text:`關於秉宏`,icon:``,path:siteLinks.about,current:"about"},
-			{text:`服務項目`,icon:``,path:siteLinks.service,current:"service"},
+			{text:`服務項目`,icon:``,path:siteLinks.services,current:"services"},
 			{text:`聯絡我們`,icon:``,path:siteLinks.contact,current:"contact"},
 		];
 
@@ -74,7 +75,7 @@ let _sliders = [
 		html:`<h2 data-animate="fadeInUp" class="mb-2">THE PUSHER <br>OF YOUR SUCCESS</h2>
 			  <h3 data-animate="fadeInUp" data-delay="200">我們幫助您實現願景</h3>
 			  <div class="mt-2" data-animate="fadeInUp" data-delay="400">
-				<a class="button button-100" href="${siteLinks.service}">服務項目</a>
+				<a class="button button-100" href="${siteLinks.services}">服務項目</a>
 				<a class="button button-wihte button-100" href="${siteLinks.contact}">聯絡我們</a>
 			  </div>`,
 
@@ -172,21 +173,21 @@ var serviceData = {
 			"icon":"gear",
 			"title":"各類五金車铣加工",
 			"description":"我們是全台灣最大的汽車零件製造商之一，並且是公認的領導者……",
-			"link":siteLinks.service,
+			"link":siteLinks.services,
 			isActive: false,
 		},
 		{
 			"icon":"gearman",
 			"title":"產品OEM代工/跨產業CNC代工",
 			"description":"我們是全台灣最大的汽車零件製造商之一，並且是公認的領導者……",
-			"link":siteLinks.service,
+			"link":siteLinks.services,
 			isActive: false,
 		},
 		{
 			"icon":"note",
 			"title":"品質檢測設備",
 			"description":"我們是全台灣最大的汽車零件製造商之一，並且是公認的領導者……",
-			"link":siteLinks.service,
+			"link":siteLinks.services,
 			isActive: false,
 		},
 	],
@@ -198,7 +199,7 @@ var serviceData = {
 
 // trigger ===========================================================================
 var triggerData= {
-	
+
 	title: "專業客製化服務",
 	link:siteLinks.contact,
 	text:"聯絡我們",
@@ -213,7 +214,8 @@ let render = new Vue({
 		whatwedo:whatWeDoData,
 		aboutus:aboutUsData,
 		service:serviceData,
-		trigger:triggerData
+		trigger:triggerData,
+		contact:contact,
 	}
 })
 

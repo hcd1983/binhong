@@ -1,6 +1,6 @@
 :root {
   --letter-spacing-default: 0.02rem;
-  --font-size-default:0.85rem;
+  --font-size-default:0.9rem;
 }
 
 @font-face {
@@ -22,12 +22,16 @@ h1, .h1 {
     font-size: 2.5rem;
 }
 
+h2 {
+    font-size: 1.5rem;
+}
+
 h3 {
     font-size: 1.05rem;
 }
 
 h4 {
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 p{
@@ -35,6 +39,9 @@ p{
 	letter-spacing: var(--letter-spacing-default);
 }
 
+#page-title.page-title-parallax{
+	padding:150px 0;
+}
 .row .section{
 	width: 100%;
 }
@@ -272,6 +279,50 @@ div.shadowBottom {
     z-index: 997;
 }
 
+
+.bin-image-section h3 {
+    width: 70%;
+    min-width: 200px;
+    height: 70px;
+    background-color: #FFF;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -35px;
+    z-index: 3;
+    position: relative;
+    box-shadow: 0 0 8px #999;
+    text-align: center;
+}
+
+.fluid-width-video-wrapper {
+    min-height: 350px;
+}
+
+p.contact-box {
+    color: #000;
+    word-spacing: 5px;
+}
+
+p.contact-box span{
+	font-weight: 700;
+	letter-spacing: calc( 5 * var(--letter-spacing-default));
+}
+
+@media (max-width: 1365px) {
+	#logo{
+		max-width: 230px;
+	}
+
+	.section{
+		padding:80px 0;
+	}
+	/*.binhong-iconbox{
+		padding: 80px 80px;
+	}*/
+}
+
 @media (max-width: 991.98px) {
 
 	#header{
@@ -299,6 +350,8 @@ div.shadowBottom {
 	    align-items: center;
 	}
 
+
+
 	ul.sf-js-enabled {
 	    width: 100vw;
 	    background: #FFF;
@@ -321,6 +374,10 @@ div.shadowBottom {
     	padding-right: 15px !important;
 	}
 
+	#page-title.page-title-parallax{
+		padding: 80px 0;
+	}
+
 }
 
 @media (max-width: 991px) {
@@ -332,6 +389,11 @@ div.shadowBottom {
 }
 
 @media (max-width: 767.98px) {
+	
+	.section{
+		padding:60px 0;
+	}
+
 	#slider.binhong-slider{
 		height: 70vh !important;
 	}
@@ -384,9 +446,7 @@ div.shadowBottom {
 		padding-right: 30px;
 	}
 
-	.section{
-		padding:130px 0;
-	}
+	
 
 	.binhong-iconbox:nth-child(3n+1) {
 	    border-left: none;
@@ -399,17 +459,14 @@ div.shadowBottom {
 
 }
 
-@media (max-width: 1365px) {
-	#logo{
-		max-width: 230px;
-	}
-	/*.binhong-iconbox{
-		padding: 80px 80px;
-	}*/
-}
+
 
 @media (min-width: 1366px) {
 	/*.binhong-iconbox{
 		padding: 80px 80px;
 	}*/
+
+	.section{
+		padding:130px 0;
+	}
 }

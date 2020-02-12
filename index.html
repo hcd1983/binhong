@@ -26,6 +26,7 @@
 	<script type="text/javascript">
 		const config = {
 			_current : "index",
+			title:"Index",
 		};
 	</script>
 	<!-- Document Title
@@ -127,123 +128,35 @@
 			</div>
 
 		</header><!-- #header end -->
-
-		<section id="slider" v-show="isActive"  class="binhong-slider slider-element slider-parallax swiper_wrapper full-screen clearfix" >
-
-			<div class="swiper-container swiper-parent">
-				<div class="swiper-wrapper">
-					
-
-					<div v-for="(slider,index) in sliders" class="swiper-slide dark" :style="{'background-image': 'url(' + slider.image + ')'}">
-						<div v-if="typeof slider.overlayStyle === 'object'" class="overlay" :style="slider.overlayStyle"></div>
-						<div class="container clearfix">
-
-							<slidercaption :slider="slider" :index="index" ></slidercaption>
-							
-						</div>
-					</div>	
-					
-				</div>
-				<div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
-				<div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
-				<!-- <div class="slide-number"><div class="slide-number-current"></div><span>/</span><div class="slide-number-total"></div></div> -->
-			</div>
-
-		</section>
 		<div class="clear"></div>
 
+
+		<section id="slider" class="binhong-slider slider-element slider-parallax swiper_wrapper full-screen clearfix">
+			<slider :sliders="sliders"></slider>
+		</section>
+		
+		
 		<!-- Page Title
 		============================================= -->
-		<section id="page-title" v-if="isActive" class="page-title-parallax page-title-dark" :style="style" style="background-size: cover; padding: 150px 0;" data-bottom-top="background-position:0px 50px;" data-top-bottom="background-position:0px -50px;">
+		<section id="page-title" v-show="false" class="page-title-parallax page-title-dark" :style="style" style="background-size: cover;" data-bottom-top="background-position:0px 50px;" data-top-bottom="background-position:0px -50px;">
 			<div class="overlay" style="background-color:rgba(26,11,8,.5);"></div>
 			<div class="container clearfix">
 				<h1 class="text-capitalize">{{text}}</h1>
 			</div>
-
 		</section><!-- #page-title end -->
 		<div class="clear"></div>
+		
 		<!-- Content
 		============================================= -->
 		<section id="content">
 			
-			<div class="content-wrap nopadding">
-				<div class="row nomargin nopadding">
-					<div id="whatwedo"  v-if="isActive" class="section nopadding nomargin bg-white" :class="[addonClass,order]">
-						<div class="container-fluid" style="max-width: 1300px;">
-							<div class="row"> 
-
-								<div v-for="(info,index) in list" class="col-md-6 col-lg-4 binhong-iconbox">
-									<div class="row m-auto">
-										<div class="binhong-icon center mb-3 mb-md-0 col-md-3 nopadding d-lg-flex align-items-center justify-content-center">
-											<img  :src="info.icon">
-										</div>
-										<div class="col-md-9">
-											<h3 class="text-center text-md-left">{{info.title}}</h3>
-											<p class="nomargin text-justify">{{info.des}}</p>
-										</div>
-									</div>	
-																	
-								</div>	
-
-							</div>
-							<div class="clear"></div>
-						</div>	
-					</div>
-
-					<div id="about_us"  v-if="isActive" class="section nomargin" style="background: #f8f8f8" :class="order">
-						<div class="container">
-							<div class="row align-items-center">
-								
-								<div class="col-md-6 mt-3 mt-md-0 order-md-2 mb-5 mb-md-0 pd-on-sm">
-									<div class="about-pic binhong-pic-shadow">
-										<img :src="image">
-									</div>								
-								</div>
-
-								<div class="col-md-6">
-									<blockquote class="noborder nopadding mb-3">
-										<h3 class="nomargin" v-html="blockquote"></h3>									
-									</blockquote>
-									<h3 class="mb-2">{{title}}</h3>
-									<p class="nomargin text-justify">{{description}}</p>
-									<div class="mt-3">
-										<a :href="link" class="button nomargin">嘹解更多</a>	
-									</div>	
-								</div>
-								
-							</div>
-						</div>
-					</div>
-
-					<div id="service" v-if="isActive" class="section nomargin bg-white" :style="style" :class="order">
-						<div class="container">
-							<h3 class="mb-5">{{title}}</h3>
-							<div class="row nomargin">
-								<div v-for="(service,index) in services" class="col-md-4 bin-icon-box mb-2 mb-md-0" :class="{active: service.isActive}" @click="activeToogle(service,index)" >
-									
-									<div class="mb-3">
-										<div v-html="icon(service.icon)"></div>
-									</div>
-									<div>
-										<h4 class="mb-2 ls1">{{service.title}}</h4>
-										<p class="mb-3 text-justify">{{service.description}}</p>
-									</div>
-									<!-- <a class="know-more" :href="service.link">瞭解更多 <i class="icon-angle-right"></i></a> -->
-								</div>
-							</div>						
-						</div>
-					</div>		
-
-					<div id="trigger_box" v-if="isActive" class="section nomargin dark  d-flex align-items-center" :style="style" :class="order">
-						<div class="overlay" style="background-color: rgba(26,11,8,.3)"></div>
-						<div class="container">
-							<h1 class="text-center mt-4">{{title}}</h1>
-							<div class="center">
-								<a :href="link" class="button button-100">{{text}}</a>	
-							</div>		
-						</div>
-					</div>	
-				</div>				
+			<div class="content-wrap nopadding" id="render">
+			
+				<whatwedo addonclass='shadowBottom' :list='whatwedo.list'></whatwedo>
+				<aboutus image="images/about.png" :blockquote="aboutus.blockquote" :description="aboutus.description" link="aboutus.link" :title="aboutus.title"></aboutus>
+				<service :title="service.title" :services="service.services"></service>
+				<trigger-box title="專業客製化服務" text="聯絡我們" link="contact.html" bgImage="images/trigger-1.png"></trigger-box>
+			
 			</div>
 
 		</section><!-- #content end -->
@@ -302,20 +215,6 @@
 
 			</div>
 
-			<!-- Copyrights
-			============================================= -->
-			<!-- <div id="copyrights">
-
-				<div class="container clearfix">
-
-					<div>
-						Copyrights &copy; 2014 All Rights Reserved by Canvas Inc.
-					</div>
-
-				</div>
-
-			</div> --><!-- #copyrights end -->
-
 		</footer><!-- #footer end -->
 
 	</div><!-- #wrapper end -->
@@ -324,7 +223,8 @@
 	============================================= -->
 	<div id="gotoTop" class="icon-angle-up"></div>
 	<script src="js/icons.js"></script>
-	<script src="site.js"></script>
+	<script src="components.js"></script>
+	<script src="site2.js"></script>
 
 	<!-- External JavaScripts
 	============================================= -->

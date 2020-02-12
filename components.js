@@ -90,7 +90,7 @@ Vue.component('aboutus', {
 							</blockquote>
 							<h3 class="mb-2">{{title}}</h3>
 							<p class="nomargin text-justify">{{description}}</p>
-							<div class="mt-3">
+							<div v-if="link" class="mt-3">
 								<a :href="link" class="button nomargin">嘹解更多</a>	
 							</div>	
 						</div>
@@ -102,7 +102,7 @@ Vue.component('aboutus', {
 });
 
 Vue.component('service', {	
-  template: `<div  class="section nomargin bg-white" :style="thestyle">
+  template: `<div  class="section nomargin bg-white" :style="thestyle()">
 					<div class="container">
 						<h3 class="mb-5">{{title}}</h3>
 						<div class="row nomargin">
@@ -144,8 +144,8 @@ Vue.component('service', {
 });
 
 Vue.component('trigger-box', {	
-  template: `<div class="section nomargin dark  d-flex align-items-center" :style="thestyle(bgimage)" >
-					<div class="overlay" style="background-color: rgba(26,11,8,.3)"></div>
+  template: `<div class="section nomargin dark d-flex align-items-center" :style="thestyle(bgimage,bgposition)">
+					<div class="overlay" style="background-color: rgba(26,11,8,.3)" ></div>
 					<div class="container">
 						<h1 class="text-center mt-4">{{title}}</h1>
 						<div class="center">
@@ -153,17 +153,23 @@ Vue.component('trigger-box', {
 						</div>		
 					</div>
 				</div>	`,
-  props: ['title','text','link','bgimage'],
+  props: ['title','text','link','bgimage','bgposition'],
   data:function(){
   	return {};
   },
   computed:{
   },
   methods:{
-  	thestyle:function(path){
+  	thestyle:function(path,bgposition=""){
+  		let pos = "center"
+  		
+  		if(bgposition){
+  			pos = bgposition;
+  		}
+
   		return {
 	  		'background-image':'url('+path+')',
-			'background-position':'center',
+			'background-position':pos,
 			'background-size':'cover',
 			'min-height':'400px'
   		}
