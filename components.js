@@ -101,3 +101,81 @@ Vue.component('aboutus', {
   props: ['image','blockquote','title','description','link'],
 });
 
+Vue.component('service', {	
+  template: `<div  class="section nomargin bg-white" :style="thestyle">
+					<div class="container">
+						<h3 class="mb-5">{{title}}</h3>
+						<div class="row nomargin">
+							<div v-for="(service,index) in services" class="col-md-4 bin-icon-box mb-2 mb-md-0" :class="{active: service.isActive}" @click="activeToogle(service,index)" >
+								
+								<div class="mb-3">
+									<div v-html="icon(service.icon)"></div>
+								</div>
+								<div>
+									<h4 class="mb-2 ls1">{{service.title}}</h4>
+									<p class="mb-3 text-justify">{{service.description}}</p>
+								</div>
+								<!-- <a class="know-more" :href="service.link">瞭解更多 <i class="icon-angle-right"></i></a> -->
+							</div>
+						</div>						
+					</div>
+				</div>`,
+  props: ['title','services'],
+  methods:{
+  		thestyle:function(){
+  			return {
+				'background-image':'url(images/world.svg)',
+				'background-position':'center',
+				'background-size':'cover',
+			};
+  		},
+		activeToogle:function(service,index){
+			
+			for (let i = 0; i < this.services.length; i++) {
+				this.services[i].isActive = false;
+			}
+
+			this.services[index].isActive = true;
+		},
+		icon(type){
+			return icon(type);
+		}
+	}
+});
+
+Vue.component('trigger-box', {	
+  template: `<div class="section nomargin dark  d-flex align-items-center" :style="thestyle(bgimage)" >
+					<div class="overlay" style="background-color: rgba(26,11,8,.3)"></div>
+					<div class="container">
+						<h1 class="text-center mt-4">{{title}}</h1>
+						<div class="center">
+							<a :href="link" class="button button-100">{{text}}</a>	
+						</div>		
+					</div>
+				</div>	`,
+  props: ['title','text','link','bgimage'],
+  data:function(){
+  	return {};
+  },
+  computed:{
+  },
+  methods:{
+  	thestyle:function(path){
+  		return {
+	  		'background-image':'url('+path+')',
+			'background-position':'center',
+			'background-size':'cover',
+			'min-height':'400px'
+  		}
+  	}
+  }
+
+});
+
+
+
+
+
+
+	
+

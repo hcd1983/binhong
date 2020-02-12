@@ -20,6 +20,9 @@ function GetHash(){
 }
 
 
+
+
+
 var siteTite = "秉宏精密科技實業有限公司";
 var contact = {
 	address:"正南一街129巷38弄26號",
@@ -162,11 +165,7 @@ var aboutUsData = {
 
 // service =========================================================
 var serviceData = {
-	style:{
-		'background-image':'url(images/world.svg)',
-		'background-position':'center',
-		'background-size':'cover',
-	},
+	
 	title: "服務項目",
 	services:[
 		{
@@ -199,12 +198,7 @@ var serviceData = {
 
 // trigger ===========================================================================
 var triggerData= {
-	style:{
-		'background-image':'url(images/trigger-1.png)',
-		'background-position':'center',
-		'background-size':'cover',
-		'min-height':'400px',
-	},
+	
 	title: "專業客製化服務",
 	link:siteLinks.contact,
 	text:"聯絡我們",
@@ -212,17 +206,16 @@ var triggerData= {
 	order:bsOrderClass(4),
 }
 
-// title =======================================================
 
-// let title = new Vue({
-// 	 el:'#title',
-// 	 data:{
-// 	 	title: site.tite,
-// 	 }
-// })
-
-
-// before Go
+let render = new Vue({
+	el:"#render",
+	data:{
+		whatwedo:whatWeDoData,
+		aboutus:aboutUsData,
+		service:serviceData,
+		trigger:triggerData
+	}
+})
 
 
 
@@ -280,21 +273,11 @@ let footer = new Vue({
 // slider ====================================================
 
 
-if(document.getElementById("slider")){
-	let slider = new Vue({
-		el:"#slider",
-		data:sliderData,
-	})
-}
 
-let render = new Vue({
-	el:"#render",
-	data:{
-		whatwedo:whatWeDoData,
-		aboutus:aboutUsData,
-	}
+let slider = new Vue({
+	el:"#slider",
+	data:sliderData,
 })
-
 
 
 let titleSection = new Vue({
@@ -302,30 +285,6 @@ let titleSection = new Vue({
 	data:titleSectionData,
 })
 
-
-let service = new Vue({
-	el:"#service",
-	data:serviceData,
-	methods:{
-		activeToogle:function(service,index){
-			
-			for (let i = 0; i < this.services.length; i++) {
-				this.services[i].isActive = false;
-			}
-
-			this.services[index].isActive = true;
-		},
-		icon(type){
-			return icon(type);
-		}
-	}
-})
-
-
-let trigger_box = new Vue({
-	el:"#trigger_box",
-	data:triggerData,
-})
 
 
 
