@@ -113,18 +113,6 @@ var whatWeDo = [
 
 	},
 	{
-		title: "全檢服務",
-		des: "貨品全檢出貨，確保我們能以穩定的產品品質，奠定與客戶的長期友誼。",
-		icon:"images/icons/check.svg",
-
-	},
-	{
-		title: "專業技術/豐富經驗",
-		des: "多年的CNC加工經歷，秉宏擁有經驗豐富的設計工程師團隊，讓我們比別人更能解決產品加工上的問題，也能為客戶降低開發成本。",
-		icon:"images/icons/idea.svg",
-
-	},
-	{
 		title: "即時服務/資訊更新",
 		des: "跟上世代的服務，即時更新的資訊，為客戶走在前端 ，即時性的回覆及服務客人。",
 		icon:"images/icons/connect.svg",
@@ -137,8 +125,20 @@ var whatWeDo = [
 
 	},
 	{
+		title: "全檢服務",
+		des: "貨品全檢出貨，確保我們能以穩定的產品品質，奠定與客戶的長期友誼。",
+		icon:"images/icons/check.svg",
+
+	},
+	{
+		title: "專業技術/豐富經驗",
+		des: "多年的CNC加工經歷，秉宏擁有經驗豐富的設計工程師團隊，讓我們比別人更能解決產品加工上的問題，也能為客戶降低開發成本。",
+		icon:"images/icons/idea.svg",
+
+	},
+	{
 		title: "設備完善/快速打樣",
-		des: "不斷的強化廠內設備，我們使用日本TSUGAMI和STAR車铣複合機型。並擁有寫程式及繪圖能力，提供快速打樣，節省開發時間。",
+		des: "不斷的強化廠內設備，我們使用日本TSUGAMI和STAR車铣複合機型。並擁有自行寫程式及繪圖能力，提供快速打樣，節省開發時間。",
 		icon:"images/icons/pan.svg",
 
 	}
@@ -172,21 +172,21 @@ var serviceData = {
 		{
 			"icon":"gear",
 			"title":"各類五金車铣加工",
-			"description":"我們是全台灣最大的汽車零件製造商之一，並且是公認的領導者……",
+			"description":"",
 			"link":siteLinks.services,
 			isActive: false,
 		},
 		{
 			"icon":"gearman",
 			"title":"產品OEM代工/跨產業CNC代工",
-			"description":"我們是全台灣最大的汽車零件製造商之一，並且是公認的領導者……",
+			"description":"",
 			"link":siteLinks.services,
 			isActive: false,
 		},
 		{
 			"icon":"note",
 			"title":"品質檢測設備",
-			"description":"我們是全台灣最大的汽車零件製造商之一，並且是公認的領導者……",
+			"description":"2.5D影像測量儀器、扭力測試機、硬度測試機、精密高度儀...等各式檢驗儀器",
 			"link":siteLinks.services,
 			isActive: false,
 		},
