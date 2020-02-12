@@ -42,10 +42,17 @@ Vue.component('slider', {
 					</div>	
 					
 				</div>
-				<div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
-				<div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
+				<div v-if="(totalsliders > 1)" class="slider-arrow-left"><i class="icon-angle-left"></i></div>
+				<div v-if="(totalsliders > 1)" class="slider-arrow-right"><i class="icon-angle-right"></i></div>
 			</div>`,
   props: ['sliders'],
+  computed:{
+  	totalsliders:function(){
+  		// return "AAA";
+  		// console.log(this.sliders.length);
+  		return this.sliders.length;
+  	}
+  }
 });
 
 Vue.component('whatwedo', {	
