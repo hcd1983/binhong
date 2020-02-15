@@ -39,6 +39,17 @@ p{
 	letter-spacing: var(--letter-spacing-default);
 }
 
+.font-big{
+	font-size: 0.95rem;
+}
+.font-bigger{
+	font-size: 1.1rem;
+}
+
+.title-big{
+	font-size: 1.25rem;
+}
+
 #page-title.page-title-parallax{
 	padding:150px 0;
 }
@@ -50,8 +61,9 @@ p{
 	background-image: none;
 }
 .slider-caption h2{
-	font-size: 4rem;
+	font-size: 3rem;
 	text-transform:none;
+	line-height: 1.5;
 }
 
 .slider-caption h3{
@@ -72,13 +84,13 @@ blockquote h3 {
 }
 
 #header.sticky-style-2 {
-    height: 113px;
+    height: auto;
 }
 
 
 
 #header, #header-wrap, #logo img{
-	height: 65px;
+	height: 80px;
 }
 
 .header-extras{
@@ -274,7 +286,13 @@ span.footer-icon {
 }
 
 div.shadowBottom {
-    box-shadow: 0 3px 3px #ddd;
+    box-shadow: 0 3px 3px #eee;
+    position: relative;
+    z-index: 997;
+}
+
+div.shadowTop {
+    box-shadow: 0 -3px 3px #ddd;
     position: relative;
     z-index: 997;
 }
@@ -317,7 +335,7 @@ p.contact-box span{
 
 @media (max-width: 1365px) {
 	#logo{
-		max-width: 230px;
+		max-width: 280px;
 	}
 
 	.section{
@@ -361,9 +379,13 @@ p.contact-box span{
 	    width: 100vw;
 	    background: #FFF;
 	    position: absolute;
-	    right: -15px;
-	    top: 65px;
+	    right: -30px;
+	    top: 80px;
 	    
+	}
+
+	ul.sf-js-enabled.d-block {
+	    box-shadow: 0 3px 8px -3px #ccc inset,0 0px 3px #ccc;
 	}
 
 	#primary-menu .container #primary-menu-trigger {
@@ -374,7 +396,8 @@ p.contact-box span{
 	}
 
 	#primary-menu > div > ul {
-	    padding-top: 0 !important;
+	    padding-top: 20px !important;
+	    padding-bottom: 20px !important;
     	padding-left: 15px !important;
     	padding-right: 15px !important;
 	}
@@ -435,6 +458,10 @@ p.contact-box span{
 	.swiper_wrapper:not(.force-full-screen), .swiper_wrapper:not(.force-full-screen):not(.canvas-slider-grid) .swiper-slide {
 	    height: 70vh !important;
 	}
+
+	.swiper_wrapper .slider-caption h2 {
+	    font-size: 1.5rem;
+	}
 }
 
 @media (min-width: 768px){
@@ -458,6 +485,7 @@ p.contact-box span{
 	#primary-menu ul li > a{
 		padding-left: 0;
 		padding-right: 30px;
+		font-size: 1.1rem;
 	}
 
 	

@@ -152,11 +152,12 @@
 			
 			<div class="content-wrap nopadding" id="render">
 				
-				<aboutus image="images/about.png" :blockquote="aboutus.blockquote" :description="aboutus.description" :title="aboutus.title"></aboutus>
+				<aboutus-two image="images/about.png" :blockquote="aboutus.blockquote" :description="aboutus.description" :title="aboutus.title" logo="images/logo.svg"></aboutus-two>
+
+				<three-images :images="['images/s-1.jpg','images/s-2.jpg','images/s-3.jpg']"></three-images>
 				
-				<whatwedo addonclass='shadowBottom' :list='whatwedo.list'></whatwedo>				
+				<whatwedo addonclass='shadowTop' :list='whatwedo.list'></whatwedo>				
 				
-				<service :title="service.title" :services="service.services"></service>
 				
 				<trigger-box title="專業客製化服務" text="聯絡我們" link="contact.html" bgImage="images/trigger-2.png"></trigger-box>
 			

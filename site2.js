@@ -72,12 +72,8 @@ let _sliders = [
 			"background-color":"rgba(26,11,8,.5)",
 		},
 		position:"center",
-		html:`<h2 data-animate="fadeInUp" class="mb-2">THE PUSHER <br>OF YOUR SUCCESS</h2>
-			  <h3 data-animate="fadeInUp" data-delay="200">我們幫助您實現願景</h3>
-			  <div class="mt-2" data-animate="fadeInUp" data-delay="400">
-				<a class="button button-100" href="${siteLinks.services}">服務項目</a>
-				<a class="button button-wihte button-100" href="${siteLinks.contact}">聯絡我們</a>
-			  </div>`,
+		html:`<h2 data-animate="fadeInUp" class="mb-2">FROM SMALL BEGINNINGS <br>COMES GREAT THINGS</h2>
+			  <h3 data-animate="fadeInUp" data-delay="200">我們的精密，完整你們的成就</h3>`,
 
 	},
 	// {
@@ -155,7 +151,7 @@ var whatWeDoData = {
 // about us =========================================================
 
 var aboutUsData = {
-	blockquote:`We save your time,<br>We save your money,<br>and we save you from your troubles.`,
+	blockquote:`We save your time;<br>We save your money;<br>and we save you from your troubles.`,
 	title: "關於秉宏精密科技",
 	link:siteLinks.about,
 	description:"秉宏精密位於台南市永康區，鄰近台南科學園區。擁有1988年至今的加工經驗，優秀的經營團隊，秉持著『人性化管理』，追求企業永續經營及成長。主要從事電子相關製造業，以射頻連接器SMA.SMB.MCX.MMCX.TNC...等系列為主軸，提供專業代工協助開發製造，同時也承接各類五金加工。",
@@ -171,22 +167,22 @@ var serviceData = {
 	services:[
 		{
 			"icon":"gear",
-			"title":"各類五金車铣加工",
-			"description":"",
+			"title":"各類電子五金 CNC 加工",
+			"description":"複合式 CNC 車銑一次完成！我們嚴格控管生產線及檢驗設備，重視每一個製作過程。提高生產品質...",
 			"link":siteLinks.services,
 			isActive: false,
 		},
 		{
 			"icon":"gearman",
-			"title":"產品OEM代工/跨產業CNC代工",
-			"description":"",
+			"title":"產品 OEM 代工",
+			"description":"客製化精密金屬零件OEM加工，擁有願意嘗試的心和經驗豐富的人，善用多年的加工經驗和電腦的精密數值...",
 			"link":siteLinks.services,
 			isActive: false,
 		},
 		{
 			"icon":"note",
 			"title":"品質檢測設備",
-			"description":"2.5D影像測量儀器、扭力測試機、硬度測試機、精密高度儀...等各式檢驗儀器",
+			"description":"ISO9001國際品質認證製造廠，我們擁有2.5D影像測量儀器、扭力測試機、硬度測試機、精密高度儀等...",
 			"link":siteLinks.services,
 			isActive: false,
 		},

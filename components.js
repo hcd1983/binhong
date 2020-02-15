@@ -95,8 +95,8 @@ Vue.component('aboutus', {
 							<blockquote class="noborder nopadding mb-3">
 								<h3 class="nomargin ls0" v-html="blockquote"></h3>									
 							</blockquote>
-							<h3 class="mb-2">{{title}}</h3>
-							<p class="nomargin text-justify">{{description}}</p>
+							<h3 class="mb-2 title-big">{{title}}</h3>
+							<p class="nomargin text-justify font-bigger ls1">{{description}}</p>
 							<div v-if="link" class="mt-3">
 								<a :href="link" class="button nomargin">嘹解更多</a>	
 							</div>	
@@ -106,6 +106,35 @@ Vue.component('aboutus', {
 				</div>
 			</div>`,
   props: ['image','blockquote','title','description','link'],
+});
+
+Vue.component('aboutus-two', {	
+  template: `<div class="section nomargin" style="background: #f8f8f8" >
+				<div class="container">
+					<div class="row align-items-center">
+						
+						<div class="col-md-6 mt-3 mt-md-0 order-md-2 mb-5 mb-md-0 pd-on-sm">
+							<div class="about-pic binhong-pic-shadow">
+								<img :src="image">
+							</div>								
+						</div>
+
+						<div class="col-md-6">
+							<img :src="logo" class="mb-5" style="width:400px;">
+							<h3 class="mb-3 title-big">{{title}}</h3>
+							<blockquote class="noborder nopadding mb-3">
+								<h3 class="nomargin ls0" v-html="blockquote"></h3>									
+							</blockquote>							
+							<p class="nomargin text-justify font-bigger ls1">{{description}}</p>
+							<div v-if="link" class="mt-3">
+								<a :href="link" class="button nomargin">嘹解更多</a>	
+							</div>	
+						</div>
+						
+					</div>
+				</div>
+			</div>`,
+  props: ['image','blockquote','title','description','link',"logo"],
 });
 
 Vue.component('service', {	
@@ -120,9 +149,9 @@ Vue.component('service', {
 								</div>
 								<div>
 									<h4 class="mb-2 ls1">{{service.title}}</h4>
-									<p class="mb-3 text-justify">{{service.description}}</p>
+									<p class="mb-3 text-justify font-big">{{service.description}}</p>
 								</div>
-								<!-- <a class="know-more" :href="service.link">瞭解更多 <i class="icon-angle-right"></i></a> -->
+								<a class="know-more" :href="service.link">瞭解更多 <i class="icon-angle-right"></i></a>
 							</div>
 						</div>						
 					</div>
@@ -181,6 +210,39 @@ Vue.component('trigger-box', {
 			'min-height':'400px'
   		}
   	}
+  }
+
+});
+
+
+Vue.component('three-images', {	
+  template: `<div  class="section nomargin bg-white" :style="thestyle()">
+				<div class="container">
+					<div class="row"> 
+						
+						<div v-for="(image,index) in images" class="col-md-4 mb-5 mb-md-0 px-md-2">
+							<img :src="image">	
+						</div>	
+
+					</div>
+					<div class="clear"></div>
+				</div>	
+			</div>`,
+  props: ['images'],
+  data:function(){
+  	return {};
+  },
+  computed:{
+  },
+  methods:{
+  	thestyle:function(){
+
+  		return {
+			'background-image':'url(images/world.svg)',
+			'background-position':'center',
+			'background-size':'cover',
+		};
+	}
   }
 
 });
