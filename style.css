@@ -112,6 +112,10 @@
 	.container { max-width: 850px; }
 }
 
+@media (min-width: 1200px) {
+	.container { max-width: 1150px; }
+}
+
 @media (min-width: 1366px) {
 	.container { max-width: 1150px; }
 }

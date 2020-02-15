@@ -167,22 +167,29 @@ var serviceData = {
 	services:[
 		{
 			"icon":"gear",
+			"cover":"images/services-1-l.png",
 			"title":"各類電子五金 CNC 加工",
 			"description":"複合式 CNC 車銑一次完成！我們嚴格控管生產線及檢驗設備，重視每一個製作過程。提高生產品質...",
+			"content":"複合式CNC車銑一次完成！我們嚴格控管生產線及檢驗設備，重視每一個製作過程。提高生產品質，縮短製程時間；優等品質，準時交貨。目標是幫助客戶降低成本，創造雙贏，協助您提升市場競爭力。",
 			"link":siteLinks.services,
 			isActive: false,
 		},
 		{
 			"icon":"gearman",
+			"cover":"images/services-2-l.png",
 			"title":"產品 OEM 代工",
 			"description":"客製化精密金屬零件OEM加工，擁有願意嘗試的心和經驗豐富的人，善用多年的加工經驗和電腦的精密數值...",
+			"content":"客製化精密金屬零件OEM加工，擁有願意嘗試的心和經驗豐富的人，善用多年的加工經驗和電腦的精密數值，達成到每項產品的精密要求。視不同要求，協助客戶共同開發，快速打樣確保設計準確性。批量生產前，也會提供樣品給客戶確認所有細節，降低合作爭議，我們希望成為每位客戶長期的績優合作廠商。",
 			"link":siteLinks.services,
 			isActive: false,
 		},
 		{
 			"icon":"note",
+			"cover":"images/services-3-l.png",
 			"title":"品質檢測設備",
 			"description":"ISO9001國際品質認證製造廠，我們擁有2.5D影像測量儀器、扭力測試機、硬度測試機、精密高度儀等...",
+			"content":"ISO9001國際品質認證製造廠，我們擁有2.5D影像測量儀器、扭力測試機、硬度測試機、精密高度儀等各式檢驗儀器。嚴格把關每項產品，仔細檢查每個細節，確保我們能以穩定的產品品質，奠定與客戶的長期友誼。",
+			"addon_image":"images/service-3-addon.png",
 			"link":siteLinks.services,
 			isActive: false,
 		},
@@ -192,6 +199,58 @@ var serviceData = {
 
 }
 
+// proccess ==========================================================================
+var proccess = [
+	{
+		"icon":"images/icons/p-1.svg",
+		"title":"客戶詢價",
+		"description":"跟上世代的服務,以最快的速度回覆客戶。",
+	},
+	{
+		"icon":"images/icons/p-1.svg",
+		"title":"報價",
+		"description":"我們擁有自行繪圖的能力,熟練軟體工具,進而能提供建議和協助,並做出精確報價。",
+	},
+	{
+		"icon":"images/icons/p-1.svg",
+		"title":"成交",
+		"description":"如果有任何配合機會,我們將盡全力的為您服務。",
+	},
+	{
+		"icon":"images/icons/p-1.svg",
+		"title":"確認圖面",
+		"description":"雙方確認圖面,降低合作爭議,我們希望能與每位客戶達成長期的配合互利。",
+	},
+	{
+		"icon":"images/icons/p-1.svg",
+		"title":"編寫程式",
+		"description":"我們擁有快速且精確編寫程式的能力,有助於確保加工零件的精密度,以及增加開發速度及產能來符合加工成本。",
+	},
+	{
+		"icon":"images/icons/p-1.svg",
+		"title":"測試",
+		"description":"把每個角度修到完美,編寫程式後進行測試,直到將產品呈現到最好。",
+	},
+	{
+		"icon":"images/icons/p-1.svg",
+		"title":"生產",
+		"description":"進行生產",
+	},
+	{
+		"icon":"images/icons/p-1.svg",
+		"title":"全檢",
+		"description":"嚴格把關每項產品,仔細檢查每個細節。我們使用多項檢測儀器,來確保秉宏的出貨品質。",
+	},
+	{
+		"icon":"images/icons/p-1.svg",
+		"title":"出貨",
+		"description":"依交期準時出貨<br>滿足客戶需求。",
+	},
+];
+var proccessData= {
+	title: "製作程序",
+	proccess:proccess,
+}
 
 // trigger ===========================================================================
 var triggerData= {
@@ -212,6 +271,7 @@ let render = new Vue({
 		service:serviceData,
 		trigger:triggerData,
 		contact:contact,
+		proccess:proccessData,
 	}
 })
 
@@ -237,7 +297,7 @@ let header = new Vue({
 		nav:nav,
 		contact:contact,
 		logoStyle:{
-			"width":"280px",
+			"width":"300px",
 		}
 	},
 	methods:{

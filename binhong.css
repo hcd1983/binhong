@@ -39,15 +39,19 @@ p{
 	letter-spacing: var(--letter-spacing-default);
 }
 
+.font-small{
+	font-size: 0.8rem;
+	letter-spacing: 0;
+}
 .font-big{
 	font-size: 0.95rem;
 }
 .font-bigger{
-	font-size: 1.1rem;
+	font-size: 1.05rem;
 }
 
 .title-big{
-	font-size: 1.25rem;
+	font-size: 1.4rem;
 }
 
 #page-title.page-title-parallax{
@@ -90,11 +94,11 @@ blockquote h3 {
 
 
 #header, #header-wrap, #logo img{
-	height: 80px;
+	height: 90px;
 }
 
 .header-extras{
-	margin-top: 15px;
+	margin-top: 30px;
 }
 
 .widget p:not(.lead) {
@@ -136,7 +140,7 @@ span.footer-icon {
 }
 
 .button{
-	font-size: .8rem;
+	font-size: .9rem;
 	font-weight: 400;
 	min-width: 128px;
 	text-align: center;
@@ -333,6 +337,137 @@ p.contact-box span{
 	text-align-last: center !important;
 }
 
+.binhong-service-box{
+	 min-height: 330px;
+}
+
+.binhong-service-icon-box{
+    background: #FFF;
+    display: flex;
+    height: 100%;
+    align-items: start;
+}
+.binhong-service-icon-box *{
+	transition: all 0.3s ease;
+}
+
+.binhong-service-icon-box .icon{
+	min-width: 70px;
+	height: auto;
+	text-align: center;
+}
+
+.binhong-service-box svg path{
+	fill:var(--main-bg-color);
+}
+
+.binhong-service-box:hover .binhong-service-icon-box{
+	background-color: var(--main-bg-color);
+}
+
+.binhong-service-box:hover .desc *{
+	color:#FFF;
+}
+
+.binhong-service-box:hover svg path{
+	fill:#FFF;
+}
+.proccess-box{
+	position: relative;
+	height: calc(100% - 30px);
+}
+.proccess-box:before,.proccess-box:after{
+	content: "";
+	width: 100%;
+	height: 50%;
+	z-index: 1;
+	position: absolute;
+	border-width: 3px;
+	border-color: var(--main-bg-color);
+	border-radius: 10px;
+	pointer-events: none;
+}
+
+.proccess-box:before{
+	top:0;
+	left: 0;
+	border-style: solid;
+	border-bottom:none;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.proccess-box:after{
+	top:50%;
+	left: 0;
+	border-style: dashed;
+	border-top:none;
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+}
+
+.proccess-box-content{
+	background-color: var(--main-bg-color);
+	border-radius: 7px;
+	border:2px solid #FFF;
+	box-shadow: -5px 3px 5px #ccc;
+	height: 100%;
+}
+
+.proccess-arrow{
+	position: absolute;
+	top:50%;
+	margin-top:-10px;
+	height: 20px;
+	width: 1rem;
+    right: -1rem;
+}
+
+.proccess-arrow:before{
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 0 5px 10px;
+	border-color: transparent transparent transparent var(--main-bg-color);
+	right: 0;
+    top: 5px;
+}
+
+.proccess-arrow:after{
+	content: "";
+	position: absolute;
+	height: 3px;
+	width: 0.8rem;
+	top:50%;
+	left:0;
+	margin-top: -1.5px;
+	background-color: var(--main-bg-color);
+}
+
+.proccess-box-outside:nth-child(even) .proccess-box-content{
+	background-color: #012669;
+}
+
+.proccess-box-outside:nth-child(even) .proccess-box:before,.proccess-box-outside:nth-child(even) .proccess-box:after{
+	border-color: #012669;
+}
+
+.proccess-box-outside:nth-child(even) .proccess-arrow:after{
+	background-color: #012669;
+}
+
+.proccess-box-outside:nth-child(even) .proccess-arrow:before{
+	border-color: transparent transparent transparent #012669;
+}
+
+.proccess-box-outside:last-child .proccess-arrow{
+	display: none;
+}
+
+
+
 @media (max-width: 1365px) {
 	#logo{
 		max-width: 280px;
@@ -414,6 +549,14 @@ p.contact-box span{
 	    color: var(--main-bg-color) !important;
 	}
 
+	.binhong-service-icon-box .icon{
+		min-width: 50px;
+	}
+
+	.binhong-service-icon-box .icon svg{
+		width: 45px;
+	}
+
 }
 
 @media (max-width: 767.98px) {
@@ -439,7 +582,52 @@ p.contact-box span{
 		border-right: none;
 		border-left: none;
 	}
+	
+	.proccess-box:before,.proccess-box:after{
+		display: none;
+	}
 
+	.proccess-arrow{
+		top:auto;
+		bottom:0;
+		left:50%;
+		right: auto;
+		margin-left:-10px;
+		width: 20px;
+	    height: 16px;
+	    z-index: 3;
+	}
+
+	.proccess-arrow:before{
+		border-width: 15px 7.5px 0 7.5px;
+		border-color: var(--main-bg-color) transparent transparent transparent;
+		right: 3px;
+    	top: auto;
+    	bottom: -13px;
+	}
+
+	.proccess-arrow:after{
+		height: 25px;
+		width: 5px;
+		top:0;
+		left:50%;
+		margin-left: -2.5px;
+		margin-top:0;
+		/*border: 1px solid #FFF;
+    	border-top: none;*/
+	}
+
+	.proccess-box-outside:nth-child(even) .proccess-arrow:before{
+		border-color: #012669 transparent transparent transparent;
+	}
+
+	.proccess-box-content{
+		height: auto;
+	}
+
+	.proccess-box{
+		height: auto;
+	}
 
 }
 
@@ -479,6 +667,11 @@ p.contact-box span{
 		text-align: justify !important;
 		text-align-last: left !important;
 	}
+
+	.text-md-justify-last-center{
+		text-align: justify !important;
+		text-align-last: center !important;
+	}
 }
 
 @media (min-width: 991px){
@@ -511,4 +704,48 @@ p.contact-box span{
 	.section{
 		padding:130px 0;
 	}
+}
+
+/*5 column*/
+
+.col-xs-1-5,
+.col-sm-1-5,
+.col-md-1-5,
+.col-lg-1-5 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-1-5 {
+    flex: 20%;
+    max-width: 20%;
+}
+
+
+@media (min-width: 768px) {
+.col-md-1-5 {
+        flex: 20%;
+    	max-width: 20%;
+    }
+}
+@media (min-width: 992px) {
+    .col-lg-1-5 {
+        flex: 20%;
+    	max-width: 20%;
+    }
+}
+@media (min-width: 1200px) {
+    .col-xl-1-5 {
+        flex: 20%;
+    	max-width: 20%;
+    }
+}
+
+@media (min-width: 1366px) {
+    .col-xxl-1-5 {
+        flex: 20%;
+    	max-width: 20%;
+    }
 }

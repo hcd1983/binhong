@@ -67,7 +67,7 @@ Vue.component('whatwedo', {
 									</div>
 									<div class="col-md-9">
 										<h3 class="text-center text-md-left">{{info.title}}</h3>
-										<p class="nomargin text-justify-last-center text-md-justify-last-left text-md-justify">{{info.des}}</p>
+										<p class="nomargin text-justify-last-center text-md-justify-last-left text-md-justify font-small">{{info.des}}</p>
 									</div>
 								</div>	
 																
@@ -140,7 +140,7 @@ Vue.component('aboutus-two', {
 Vue.component('service', {	
   template: `<div  class="section nomargin bg-white" :style="thestyle()">
 					<div class="container">
-						<h3 class="mb-5">{{title}}</h3>
+						<h3 class="mb-5 title-big">{{title}}</h3>
 						<div class="row nomargin">
 							<div v-for="(service,index) in services" class="col-md-4 bin-icon-box mb-2 mb-md-0" :class="{active: service.isActive}" @click="activeToogle(service,index)" >
 								
@@ -173,6 +173,35 @@ Vue.component('service', {
 
 			this.services[index].isActive = true;
 		},
+		icon(type){
+			return icon(type);
+		}
+	}
+});
+
+Vue.component('service-iconlist', {	
+  template: `<div class="section nomargin" style="background: #f8f8f8" >
+					<div class="container">
+						<div v-for="(service,index) in services" class="row binhong-service-box mb-5 shadow">
+							<div class="col-lg-6 p-lg-0" >
+								<div class="overlay d-none d-lg-block" style="background-size: cover;" :style="{'background-image':'url('+service.cover+')'}"></div>
+								<img src="images/services-1-l.png" class="d-lg-none" style="width:100%;">
+							</div>
+							<div class="col-lg-6 p-lg-0">
+								<div class="binhong-service-icon-box p-3 p-lg-4">
+									<div class="icon" v-html="icon(service.icon)"></div>
+									<div class="desc pl-3">
+										<h3 class="title-big mt-3 mb-4">{{service.title}}</h3>
+										<p class="font-bigger mb-2">{{service.content}}</p>
+										<img v-if="service.addon_image" :src="service.addon_image">
+									</div>	
+								</div>	
+							</div>	
+						</div>	
+					</div>	
+				</div>`,
+  props: ['services'],
+  methods:{
 		icon(type){
 			return icon(type);
 		}
@@ -245,6 +274,38 @@ Vue.component('three-images', {
 	}
   }
 
+});
+
+Vue.component('proccess', {	
+  template: `<div class="section bg-white nomargin" style="background-image:url(images/world-2.svg);background-size: cover;background-position: center">
+					<div class="container-fluid" style="max-width:1360px;">
+						<div class="row m-0">
+							<h3 class="col-12 mb-5 title-big p-md-0 text-center">{{title}}</h3>
+						</div>	
+						<div class="row proccess-flow m-0">
+							
+							<div v-for="(item,index) in proccess" class="col-12 col-md-6 col-lg-4 col-xl-1-5 p-md-0 pr-md-3 proccess-box-outside">
+								<div class="proccess-box-line"></div>
+								<div class="proccess-box dark pt-2 pb-2 pl-0 pr-0 p-md-3 pl-md-0 pr-md-0 mb-md-5">
+									<div class="proccess-box-content">
+										<div class="row p-2 pt-lg-3 nomargin align-items-center">
+											<div class="col-lg-12 col-3 text-center mb-lg-3">
+												<img :src="item.icon">
+											</div>
+											<div class="col-lg-12 col-9">
+												<h3 class="text-md-center mt-0 mt-lg-2 mt-md-0 mb-2">{{item.title}}</h3>
+												<p class="text-left text-md-justify-last-center mb-2 font-small" v-html="item.description"></p>
+											</div>	
+										</div>
+									</div>
+									<div class="proccess-arrow"></div>
+								</div>
+							</div>	
+
+						</div>	
+					</div>
+				</div>	`,
+  props: ['proccess','title'],
 });
 
 
