@@ -185,7 +185,7 @@ Vue.component('service-iconlist', {
 						<div v-for="(service,index) in services" class="row binhong-service-box mb-5 shadow">
 							<div class="col-lg-6 p-lg-0" >
 								<div class="overlay d-none d-lg-block" style="background-size: cover;" :style="{'background-image':'url('+service.cover+')'}"></div>
-								<img src="images/services-1-l.png" class="d-lg-none" style="width:100%;">
+								<img :src="service.cover" class="d-lg-none" style="width:100%;">
 							</div>
 							<div class="col-lg-6 p-lg-0">
 								<div class="binhong-service-icon-box p-3 p-lg-4">
