@@ -31,7 +31,7 @@ var contact = {
 	tel : "06-2541688",
 	telfooter:"06 254 1688 / 06 254 5166", 
 	email: "binhong.sales@gmail.com",
-	time: "8:00-17:00 Mon-Sat",
+	time: "8:30-17:30 週一至週五",
 	barcode: "64915368",
 	fax:"06-2545166"
 }
@@ -68,6 +68,16 @@ var nav = [
 let _sliders = [
 	{
 		image:"images/slider01.png",
+		overlayStyle:{
+			"background-color":"rgba(26,11,8,.5)",
+		},
+		position:"center",
+		html:`<h2 data-animate="fadeInUp" class="mb-2">FROM SMALL BEGINNINGS <br>COMES GREAT THINGS</h2>
+			  <h3 data-animate="fadeInUp" data-delay="200">我們的精密，完整你們的成就</h3>`,
+
+	},
+	{
+		image:"images/blur2.jpg",
 		overlayStyle:{
 			"background-color":"rgba(26,11,8,.5)",
 		},
@@ -188,7 +198,9 @@ var serviceData = {
 			"cover":"images/services-3-l.png",
 			"title":"品質檢測設備",
 			"description":"ISO9001國際品質認證製造廠，我們擁有2.5D影像測量儀器、扭力測試機、硬度測試機、精密高度儀等...",
-			"content":"ISO9001國際品質認證製造廠，我們擁有2.5D影像測量儀器、扭力測試機、硬度測試機、精密高度儀等各式檢驗儀器。嚴格把關每項產品，仔細檢查每個細節，確保我們能以穩定的產品品質，奠定與客戶的長期友誼。",
+			"content":`ISO9001國際品質認證製造廠，我們擁有2.5D影像測量儀器、扭力測試機、硬度測試機、精密高度儀等各式檢驗儀器。嚴格把關每項產品，仔細檢查每個細節，確保我們能以穩定的產品品質，奠定與客戶的長期友誼。
+			<br><img src="images/service-3-addon3.png" class='mt-2' style='width:180px'><br>
+			<small class="d-block pl-3 t700 ls0">Registered to ISO 9001</small>`,
 			"addon_image":"images/service-3-addon.png",
 			"link":siteLinks.services,
 			isActive: false,
@@ -319,9 +331,9 @@ let footer = new Vue({
 	data:{
 		logo:site.logo_bw,
 		nav:nav,
-		des:"穩定的產品，讓客戶信任我們的優質服務。合理的價格，讓我們確保客戶的最大利益，我們對自己工廠的實力感到自豪和信心。",
+		des:"穩定的產品，讓客戶信任我們的優質服務。<br>合理的價格，讓我們確保客戶的最大利益。<br>我們對自己工廠的實力感到自豪和信心。",
 		contact:contact,
-		des_2:"我們的上班週一至週五,8:30-17:30<br>歡迎聯絡，我們會儘快回覆您的訊息。",
+		des_2:"我們的上班時間為週一至週五,8:30-17:30<br>歡迎聯絡，我們會儘快回覆您的訊息。",
 		bg_image:footer_bg,
 	}
 

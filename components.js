@@ -1,5 +1,5 @@
 Vue.component('slidercaption',{
-    template: '<div class="slider-caption" :class="renderClass" v-html="slider.html"></div>',
+    template: '<div class="slider-caption d-none" :class="renderClass" v-html="slider.html"></div>',
     props: ['slider','index'],
     computed: {
     	renderClass: function(){
@@ -192,8 +192,8 @@ Vue.component('service-iconlist', {
 									<div class="icon" v-html="icon(service.icon)"></div>
 									<div class="desc pl-3">
 										<h3 class="title-big mt-3 mb-4">{{service.title}}</h3>
-										<p class="font-bigger mb-2">{{service.content}}</p>
-										<img v-if="service.addon_image" :src="service.addon_image">
+										<p class="font-bigger mb-2 text-justify" v-html="service.content">{{service.content}}</p>
+										<!--<img v-if="service.addon_image" :src="service.addon_image">-->
 									</div>	
 								</div>	
 							</div>	
@@ -312,6 +312,62 @@ Vue.component('proccess', {
 
 
 
+Vue.component('footer-component',{
+    template: `<!-- Footer
+		============================================= -->
+		<footer class="dark noborder" style="background-image:rgba(0,0,0,.8);background-size: cover;background-position: center;" :style="{'background-image':'url('+bg_image+')'}">
+			<div class="overlay" style="background-color:rgba(0,0,0,.8);"></div>
+			<div class="container">
 
-	
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap clearfix">
+					<div class="row">
+						
+						<div class="col-md-5 nomargin">						
+							<div class="widget clearfix">
+
+								<img :src="logo" alt="" class="footer-logo mb-3">
+
+								<p class="mb-4 pb-3" v-html="des"></p>
+
+							</div>
+							<ul v-if="nav" id="footer_nav">
+								<li v-for="(li , index) in nav">
+									<a :href="li.path">{{li.text}}</a>
+								</li>
+							</ul>						
+
+						</div>
+
+						<div class="col-md-2  mt-5 mt-md-0"></div>
+
+						<div class="col-md-5 nomargin">
+
+							<div class="widget clearfix">
+								<div class="mb-3 d-block d-md-none"></div>
+								<h4  class="mb-3" style="color:#FFF">聯絡資訊</h4>
+								<p v-html="des_2" class="mb-4"></p>
+								<div class="d-flex align-items-center mb-2">
+									<span class="footer-icon"><img src="images/icons/f-map.svg"></span><p class="nomargin nopadding">{{contact.addressFull}}</p>
+								</div>
+								<div class="d-flex align-items-center mb-2">
+									<span class="footer-icon"><img src="images/icons/f-mail.svg"></span><p class="nomargin nopadding">{{contact.email}}</p>
+								</div>
+								<div class="d-flex align-items-center">
+									<span class="footer-icon"><img src="images/icons/f-tel.svg"></span><p class="nomargin nopadding">{{contact.telfooter}}</p>
+								</div>
+							</div>	
+
+						</div>
+
+					</div>	
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+		</footer><!-- #footer end -->`,
+    props: ['des','nav','contact','logo','des_2','bg_image','des'],
+})
 
