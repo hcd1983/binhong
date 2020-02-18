@@ -127,7 +127,7 @@ var whatWeDo = [
 	},
 	{
 		title: "品質保證",
-		des: "通過ISO9001:2015的國際認證。",
+		des: "通過 ISO9001 國際認證。",
 		icon:"images/icons/award.svg",
 
 	},
@@ -178,7 +178,7 @@ var serviceData = {
 	services:[
 		{
 			"icon":"gear",
-			"cover":"images/services-1-l.png",
+			"cover":"images/services-1-l-2.png",
 			"title":"各類電子五金 CNC 加工",
 			"description":"複合式 CNC 車銑一次完成！我們嚴格控管生產線及檢驗設備，重視每一個製作過程。提高生產品質...",
 			"content":"複合式CNC車銑一次完成！我們嚴格控管生產線及檢驗設備，重視每一個製作過程。提高生產品質，縮短製程時間；優等品質，準時交貨。目標是幫助客戶降低成本，創造雙贏，協助您提升市場競爭力。",
