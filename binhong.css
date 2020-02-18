@@ -650,6 +650,13 @@ p.contact-box span{
 	.swiper_wrapper .slider-caption h2 {
 	    font-size: 1.5rem;
 	}
+
+	.slider-arrow-left, .slider-arrow-right {
+	    bottom: 0;
+	    top: auto;
+	    width: 49.5%;
+	    text-align: center;
+	}
 }
 
 @media (min-width: 768px){
