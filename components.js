@@ -1,5 +1,5 @@
 Vue.component('slidercaption',{
-    template: '<div class="slider-caption d-none" :class="renderClass" v-html="slider.html"></div>',
+    template: '<div class="slider-caption" :class="renderClass" v-html="slider.html"></div>',
     props: ['slider','index'],
     computed: {
     	renderClass: function(){
@@ -37,7 +37,7 @@ Vue.component('slider', {
 					<div v-for="(slider,index) in sliders" class="swiper-slide dark" :style="{'background-image': 'url(' + slider.image + ')'}">
 						<div v-if="typeof slider.overlayStyle === 'object'" class="overlay" :style="slider.overlayStyle"></div>
 						<div class="container clearfix">
-							<slidercaption :slider="slider" :index="index" ></slidercaption>							
+							<slidercaption v-if="!usefirstcaption" :slider="slider" :index="index"></slidercaption>							
 						</div>
 					</div>	
 					
@@ -45,9 +45,10 @@ Vue.component('slider', {
 				<div v-if="(totalsliders > 1)" class="slider-arrow-left"><i class="icon-angle-left"></i></div>
 				<div v-if="(totalsliders > 1)" class="slider-arrow-right"><i class="icon-angle-right"></i></div>
 			</div>`,
-  props: ['sliders'],
+  props: ['sliders','usefirstcaption'],
   computed:{
   	totalsliders:function(){
+  		console.log(this.usefirstcaption)
   		// return "AAA";
   		// console.log(this.sliders.length);
   		return this.sliders.length;
