@@ -329,7 +329,7 @@ Vue.component('footer-component',{
 
 								<img :src="logo" alt="" class="footer-logo mb-3">
 
-								<p class="mb-4 pb-3" v-html="des"></p>
+								<p class="mb-4 pb-md-3" v-html="des"></p>
 
 							</div>
 							<ul v-if="nav" id="footer_nav">

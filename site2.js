@@ -100,6 +100,7 @@ var sliderData = {
 	isActive:true,
 	style:{height:"450px"},
 	sliders:_sliders,
+	useFirstCaption:true,
 }
 
 //tilte section ===============================================================		
@@ -342,12 +343,14 @@ let footer = new Vue({
 
 // slider ====================================================
 
+if(document.getElementById("slider") ){
+		let slider = new Vue({
+		el:"#slider",
+		data:sliderData,
+	})
+}
 
 
-let slider = new Vue({
-	el:"#slider",
-	data:sliderData,
-})
 
 
 let titleSection = new Vue({
