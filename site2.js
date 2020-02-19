@@ -28,8 +28,8 @@ var contact = {
 	address:"正南一街129巷38弄26號",
 	addressTwo:"永康區,台南市" ,
 	addressFull:"台南市永康區正南一街129巷38弄26號",
-	tel : "06-2541688",
-	telfooter:"06 254 1688 / 06 254 5166", 
+	tel : "06-2541688 / 0988 018 872",
+	telfooter:"06 254 1688 / 06 254 5166",
 	email: "binhong.sales@gmail.com",
 	time: "8:30-17:30 週一至週五",
 	barcode: "64915368",
@@ -91,9 +91,9 @@ let _sliders = [
 	// 	position:"",
 	// 	html:`<h2 data-animate="fadeInUp">我們幫助你實現願景2</h2>
 	// 		<p class="d-none d-sm-block" data-animate="fadeInUp" data-delay="200">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.</p>`,
-		
+
 	// },
-	
+
 ];
 
 var sliderData = {
@@ -103,7 +103,7 @@ var sliderData = {
 	useFirstCaption:true,
 }
 
-//tilte section ===============================================================		
+//tilte section ===============================================================
 var titleSectionData = {
 	isActive:true,
 	text:PageTitle,
@@ -169,11 +169,11 @@ var aboutUsData = {
 	image:"images/about.png",
 	order:bsOrderClass(2),
 	isActive:true,
-} 
+}
 
 // service =========================================================
 var serviceData = {
-	
+
 	title: "服務項目",
 	services:[
 		{
@@ -316,7 +316,7 @@ let header = new Vue({
 	methods:{
 		currentPage: function(_current){
 
-			return _current == PageID;	
+			return _current == PageID;
 
 		},
 	}
@@ -327,7 +327,7 @@ let header = new Vue({
 
 // footer =====================================================================
 let footer = new Vue({
-	
+
 	el:"#footer",
 	data:{
 		logo:site.logo_bw,
@@ -357,8 +357,3 @@ let titleSection = new Vue({
 	el:"#page-title",
 	data:titleSectionData,
 })
-
-
-
-
-
