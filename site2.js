@@ -252,7 +252,7 @@ var proccess = [
 	{
 		"icon":"images/icons/p-8.svg",
 		"title":"全檢",
-		"description":"嚴格把關每項產品,仔細檢查每個細節。我們使用多項檢測儀器,來確保秉宏的出貨品質。",
+		"description":"嚴格把關每項產品,仔細檢查每個細節。我們使用多項檢測儀來確保出貨品質。",
 	},
 	{
 		"icon":"images/icons/p-9.svg",
