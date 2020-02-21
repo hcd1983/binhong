@@ -48,7 +48,7 @@ Vue.component('slider', {
   props: ['sliders','usefirstcaption'],
   computed:{
   	totalsliders:function(){
-  		console.log(this.usefirstcaption)
+  		// console.log(this.usefirstcaption)
   		// return "AAA";
   		// console.log(this.sliders.length);
   		return this.sliders.length;
