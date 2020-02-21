@@ -466,6 +466,10 @@ p.contact-box span{
 	display: none;
 }
 
+.binhong-proccess.container-fluid{
+	max-width: 1360px;
+}
+
 
 
 @media (max-width: 1365px) {
@@ -475,6 +479,10 @@ p.contact-box span{
 
 	.section{
 		padding:80px 0;
+	}
+
+	.binhong-proccess.container-fluid{
+		max-width: 950px;
 	}
 	/*.binhong-iconbox{
 		padding: 80px 80px;
@@ -743,7 +751,7 @@ p.contact-box span{
     	max-width: 20%;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
     .col-xl-1-5 {
         flex: 20%;
     	max-width: 20%;

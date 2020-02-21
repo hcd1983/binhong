@@ -279,13 +279,13 @@ Vue.component('three-images', {
 
 Vue.component('proccess', {	
   template: `<div class="section bg-white nomargin" style="background-image:url(images/world-2.svg);background-size: cover;background-position: center">
-					<div class="container-fluid" style="max-width:1360px;">
+					<div class="container-fluid binhong-proccess">
 						<div class="row m-0">
 							<h3 class="col-12 mb-5 title-big p-md-0 text-center">{{title}}</h3>
 						</div>	
 						<div class="row proccess-flow m-0">
 							
-							<div v-for="(item,index) in proccess" class="col-12 col-md-6 col-lg-4 col-xl-1-5 p-md-0 pr-md-3 proccess-box-outside">
+							<div v-for="(item,index) in proccess" class="col-12 col-md-6 col-lg-4 col-xxl-1-5 p-md-0 pr-md-3 proccess-box-outside">
 								<div class="proccess-box-line"></div>
 								<div class="proccess-box dark pt-2 pb-2 pl-0 pr-0 p-md-3 pl-md-0 pr-md-0 mb-md-5">
 									<div class="proccess-box-content">
