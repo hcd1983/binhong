@@ -3460,7 +3460,7 @@ body.stretched .container-fullwidth .breadcrumb { right: 60px !important; }
 
 #page-title.page-title-parallax {
 	background-color: transparent;
-	background-image: url('images/parallax/parallax-bg.jpg');
+	/*background-image: url('images/parallax/parallax-bg.jpg');*/
 	background-attachment: fixed;
 	background-position: 50% 0;
 	background-repeat: no-repeat;
