@@ -77,7 +77,7 @@ let _sliders = [
 
 	},
 	{
-		image:"images/blur2.jpg",
+		image:"images/blur2.webp",
 		overlayStyle:{
 			"background-color":"rgba(26,11,8,.5)",
 		},
