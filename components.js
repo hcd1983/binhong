@@ -64,7 +64,7 @@ Vue.component('whatwedo', {
 							<div v-for="(info,index) in list" class="col-md-6 col-lg-4 binhong-iconbox">
 								<div class="row m-auto">
 									<div class="binhong-icon center mb-3 mb-md-0 col-md-3 nopadding d-lg-flex align-items-center justify-content-center">
-										<img  :src="info.icon">
+										<img  :data-lazyload="info.icon">
 									</div>
 									<div class="col-md-9">
 										<h3 class="text-center text-md-left">{{info.title}}</h3>
@@ -88,7 +88,7 @@ Vue.component('aboutus', {
 						
 						<div class="col-md-6 mt-3 mt-md-0 order-md-2 mb-5 mb-md-0 pd-on-sm">
 							<div class="about-pic binhong-pic-shadow">
-								<img :src="image">
+								<img :data-lazyload="image">
 							</div>								
 						</div>
 
@@ -116,12 +116,12 @@ Vue.component('aboutus-two', {
 						
 						<div class="col-md-6 mt-3 mt-md-0 order-md-2 mb-5 mb-md-0 pd-on-sm">
 							<div class="about-pic binhong-pic-shadow">
-								<img :src="image">
+								<img :data-lazyload="image">
 							</div>								
 						</div>
 
 						<div class="col-md-6">
-							<img :src="logo" class="mb-5" style="width:400px;">
+							<img :data-lazyload="logo" class="mb-5" style="width:400px;">
 							<h3 class="mb-3 title-big">{{title}}</h3>
 							<blockquote class="noborder nopadding mb-3">
 								<h3 class="nomargin ls0" v-html="blockquote"></h3>									
@@ -186,7 +186,7 @@ Vue.component('service-iconlist', {
 						<div v-for="(service,index) in services" class="row binhong-service-box mb-5 shadow">
 							<div class="col-lg-6 p-lg-0" >
 								<div class="overlay d-none d-lg-block" style="background-size: cover;" :style="{'background-image':'url('+service.cover+')'}"></div>
-								<img :src="service.cover" class="d-lg-none" style="width:100%;">
+								<img :data-lazyload="service.cover" class="d-lg-none" style="width:100%;">
 							</div>
 							<div class="col-lg-6 p-lg-0">
 								<div class="binhong-service-icon-box p-3 p-lg-4">
@@ -194,7 +194,7 @@ Vue.component('service-iconlist', {
 									<div class="desc pl-3">
 										<h3 class="title-big mt-3 mb-4">{{service.title}}</h3>
 										<p class="font-bigger mb-2 text-justify" v-html="service.content">{{service.content}}</p>
-										<!--<img v-if="service.addon_image" :src="service.addon_image">-->
+										<!--<img v-if="service.addon_image" :data-lazyload="service.addon_image">-->
 									</div>	
 								</div>	
 							</div>	
@@ -251,7 +251,7 @@ Vue.component('three-images', {
 					<div class="row"> 
 						
 						<div v-for="(image,index) in images" class="col-md-4 mb-5 mb-md-0 px-md-2">
-							<img :src="image">	
+							<img :data-lazyload="image">	
 						</div>	
 
 					</div>
@@ -291,7 +291,7 @@ Vue.component('proccess', {
 									<div class="proccess-box-content">
 										<div class="row p-2 pt-lg-3 nomargin align-items-center">
 											<div class="col-lg-12 col-3 text-center mb-lg-3">
-												<img :src="item.icon">
+												<img :data-lazyload="item.icon">
 											</div>
 											<div class="col-lg-12 col-9">
 												<h3 class="text-md-center mt-0 mt-lg-2 mt-md-0 mb-2">{{item.title}}</h3>
@@ -328,7 +328,7 @@ Vue.component('footer-component',{
 						<div class="col-md-5 nomargin">						
 							<div class="widget clearfix">
 
-								<img :src="logo" alt="" class="footer-logo mb-3">
+								<img :data-lazyload="logo" alt="" class="footer-logo mb-3">
 
 								<p class="mb-4 pb-md-3" v-html="des"></p>
 
