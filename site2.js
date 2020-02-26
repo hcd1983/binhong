@@ -275,91 +275,92 @@ var triggerData= {
 	order:bsOrderClass(4),
 }
 
-
-let render = new Vue({
-	el:"#render",
-	data:{
-		whatwedo:whatWeDoData,
-		aboutus:aboutUsData,
-		service:serviceData,
-		trigger:triggerData,
-		contact:contact,
-		proccess:proccessData,
-	}
-})
-
-
-
-// top bar ===========================================================
-let topBar = new Vue({
-    el:'#top-bar',
-    data: {
-    	"isdark":true,
-    	"topbartext":"Welcome to our website!",
-	}
-})
-
-// header =================================================================
-
-let header = new Vue({
-	el:"#header",
-	data:{
-		image: site.logo,
-    	image2x: site.logo,
-    	path: site.base,
-		nav:nav,
-		contact:contact,
-		logoStyle:{
-			"width":"300px",
+function VueInit(){
+	let render = new Vue({
+		el:"#render",
+		data:{
+			whatwedo:whatWeDoData,
+			aboutus:aboutUsData,
+			service:serviceData,
+			trigger:triggerData,
+			contact:contact,
+			proccess:proccessData,
 		}
-	},
-	methods:{
-		currentPage: function(_current){
+	})
 
-			return _current == PageID;
 
+
+	// top bar ===========================================================
+	let topBar = new Vue({
+	    el:'#top-bar',
+	    data: {
+	    	"isdark":true,
+	    	"topbartext":"Welcome to our website!",
+		}
+	})
+
+	// header =================================================================
+
+	let header = new Vue({
+		el:"#header",
+		data:{
+			image: site.logo,
+	    	image2x: site.logo,
+	    	path: site.base,
+			nav:nav,
+			contact:contact,
+			logoStyle:{
+				"width":"300px",
+			}
 		},
+		methods:{
+			currentPage: function(_current){
+
+				return _current == PageID;
+
+			},
+		}
+	})
+
+
+
+
+	// footer =====================================================================
+	let footer = new Vue({
+
+		el:"#footer",
+		data:{
+			logo:site.logo_bw,
+			nav:nav,
+			des:"穩定的產品，讓客戶信任我們的優質服務。<br>合理的價格，讓我們確保客戶的最大利益。<br>我們對自己工廠的實力感到自豪和信心。",
+			contact:contact,
+			des_2:"我們的上班時間為週一至週五，8:30-17:30<br>歡迎聯絡，我們會儘快回覆您的訊息。",
+			bg_image:footer_bg,
+		}
+
+	})
+
+
+	// slider ====================================================
+
+	if(document.getElementById("slider") ){
+			let slider = new Vue({
+			el:"#slider",
+			data:sliderData,
+		})
 	}
-})
 
 
 
 
-// footer =====================================================================
-let footer = new Vue({
+	let titleSection = new Vue({
+		el:"#page-title",
+		data:titleSectionData,
+	})
 
-	el:"#footer",
-	data:{
-		logo:site.logo_bw,
-		nav:nav,
-		des:"穩定的產品，讓客戶信任我們的優質服務。<br>合理的價格，讓我們確保客戶的最大利益。<br>我們對自己工廠的實力感到自豪和信心。",
-		contact:contact,
-		des_2:"我們的上班時間為週一至週五，8:30-17:30<br>歡迎聯絡，我們會儘快回覆您的訊息。",
-		bg_image:footer_bg,
-	}
+	// =============================
 
-})
-
-
-// slider ====================================================
-
-if(document.getElementById("slider") ){
-		let slider = new Vue({
-		el:"#slider",
-		data:sliderData,
+	let empty = new Vue({
+		el:"#empty",
 	})
 }
-
-
-
-
-let titleSection = new Vue({
-	el:"#page-title",
-	data:titleSectionData,
-})
-
-// =============================
-
-let empty = new Vue({
-	el:"#empty",
-})
