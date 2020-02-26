@@ -1275,16 +1275,6 @@
 	}
 
 
-
-	.post-grid:not(.post-masonry) .entry-image iframe { height: 246px; }
-
-
-	.shop:not(.product-1) .product-title h3 { font-size: 17px; }
-
-	.clients-grid:not(.grid-3):not(.grid-2) li,
-	.clients-grid.grid-4 li,
-	.clients-grid.grid-6 li { width: 33.33%; }
-
 	.button.button-full { font-size: 18px; }
 
 	.button.button-full i {
@@ -1317,7 +1307,35 @@
 
 	#primary-menu-trigger { left: 20px; }
 
-	
+	#top-cart { display: none; }
+
+	#top-search a { right: 40px; }
+
+	#top-search form input { padding-right: 55px; }
+
+	#side-panel-trigger { right: 68px; }
+
+	#top-account { right: 68px; }
+
+	#top-account a.btn {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+
+	#top-account a.btn i:last-child { display: none; }
+
+	.swiper_wrapper:not(.force-full-screen),
+	.swiper_wrapper:not(.force-full-screen):not(.canvas-slider-grid) .swiper-slide { height: 180px !important; }
+
+	.swiper_wrapper .slider-caption h2 { font-size: 1.75rem; }
+
+	.swiper_wrapper .slider-caption p { font-size: 1rem; }
+
+	#header.transparent-header.floating-header .container {
+		width: 310px;
+		padding: 0 15px;
+	}
+
 	.portfolio-filter li { width: 50%; }
 
 	.portfolio:not(.portfolio-1) { margin: 0; }
@@ -1334,28 +1352,7 @@
 		margin: 0 0 20px 0;
 	}
 
-	.mpost .entry-image,
-	.mpost .entry-image a,
-	.mpost .entry-image img,
-	.mpost .entry-image i {
-		width: 100%;
-		height: auto;
-	}
-
-	.mpost .entry-image i {
-		height: 150px;
-		line-height: 150px;
-	}
-
-	.shop:not(.product-1) { margin: 0 !important; }
-
-	.shop:not(.product-1) .product {
-		margin: 0 0 20px 0;
-		padding: 0;
-		width: 100%;
-	}
-
-	.shop:not(.product-1) .product-title h3 { font-size: 19px; }
+	
 
 	.fslider:not(.flex-thumb-grid) .flex-control-nav.flex-control-thumbs { height: 45px; }
 
@@ -1510,7 +1507,7 @@ only screen and (                min-resolution: 2dppx) {
 	.dark .widget_categories li a,
 	.dark .widget_pages li a,
 	.dark .widget_rss li a,
-	.dark .widget_recent_comments li a { background-image: url("../images/icons/widget-link-dark@2x.png"); }
+	
 
 }
 
