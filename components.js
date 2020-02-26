@@ -372,3 +372,8 @@ Vue.component('footer-component',{
     props: ['des','nav','contact','logo','des_2','bg_image','des'],
 })
 
+
+Vue.component('empty-component', {	
+  template: "",
+});
+

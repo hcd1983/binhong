@@ -357,3 +357,9 @@ let titleSection = new Vue({
 	el:"#page-title",
 	data:titleSectionData,
 })
+
+// =============================
+
+let empty = new Vue({
+	el:"#empty",
+})
