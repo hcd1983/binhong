@@ -39,6 +39,25 @@ p{
 	letter-spacing: var(--letter-spacing-default);
 }
 
+i.icon-angle-left, i.icon-angle-right {
+    width: 100%;
+    background-image: url(images/up.svg);
+    background-size: 30px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+i.icon-angle-right{
+	transform: rotate(90deg);
+}
+i.icon-angle-left{
+	transform: rotate(-90deg);
+}
+
 .font-small{
 	font-size: 0.8rem;
 	letter-spacing: 0;
