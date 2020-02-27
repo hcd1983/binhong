@@ -39,7 +39,7 @@ p{
 	letter-spacing: var(--letter-spacing-default);
 }
 
-i.icon-angle-left, i.icon-angle-right {
+/*i.icon-angle-left, i.icon-angle-right {
     width: 100%;
     background-image: url(images/up.svg);
     background-size: 30px;
@@ -56,7 +56,7 @@ i.icon-angle-right{
 }
 i.icon-angle-left{
 	transform: rotate(-90deg);
-}
+}*/
 
 .font-small{
 	font-size: 0.8rem;
