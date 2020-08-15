@@ -43,7 +43,7 @@ var siteLinks = {
 	contact:"contact.html",
 }
 
-var footer_bg = "images/footer-bg.webp";
+var footer_bg = "images/footer-bg.png";
 
 var logo = "images/logo.svg";
 var logo_bw = "images/logo_bw.svg";
@@ -67,7 +67,7 @@ var nav = [
 // slider ========================================
 let _sliders = [
 	{
-		image:"images/slider01.webp",
+		image:"images/slider01.png",
 		overlayStyle:{
 			"background-color":"rgba(26,11,8,.5)",
 		},
@@ -77,7 +77,7 @@ let _sliders = [
 
 	},
 	{
-		image:"images/blur2.webp",
+		image:"images/blur2.png",
 		overlayStyle:{
 			"background-color":"rgba(26,11,8,.5)",
 		},
@@ -108,7 +108,7 @@ var titleSectionData = {
 	isActive:true,
 	text:PageTitle,
 	style:{
-		'background-image':'url(images/slider01.webp)',
+		'background-image':'url(images/slider01.png)',
 	},
 }
 // what we do ==================================================================
@@ -166,7 +166,7 @@ var aboutUsData = {
 	title: "關於秉宏精密科技",
 	link:siteLinks.about,
 	description:"秉宏精密位於台南市永康區，鄰近台南科學園區。擁有1988年至今的加工經驗，優秀的經營團隊，秉持著『人性化管理』，追求企業永續經營及成長。主要從事電子相關製造業，以射頻連接器SMA.SMB.MCX.MMCX.TNC...等系列為主軸，提供專業代工協助開發製造，同時也承接各類五金加工。",
-	image:"images/about.webp",
+	image:"images/about.png",
 	order:bsOrderClass(2),
 	isActive:true,
 }
